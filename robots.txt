@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://subinna116.github.io/sitemap.xml
+Sitemap: https://subinna116.github.io/subinna116/sitemap.xml
