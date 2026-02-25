@@ -2,33 +2,34 @@
 layout: about
 title: Home
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: PhD student · School of Social Policy & Practice · University of Pennsylvania
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p><strong>Email:</strong> <a href="mailto:subinna@upenn.edu">subinna@upenn.edu</a></p>
+    <p><strong>Affiliation:</strong> University of Pennsylvania</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false
+social: true
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: false
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I’m a PhD student in the School of Social Policy & Practice at the University of Pennsylvania. My research focuses on how mental health systems can better promote recovery and equity—especially through recovery-oriented practice, peer support, and culturally responsive services. Methodologically, I use quantitative methods and text-as-data / NLP approaches to produce transparent, policy-relevant evidence.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+**Current areas of work**
+- **Peer support workforce & role construction:** large-scale analysis of U.S. peer support worker job postings (text-as-data dissertation)
+- **Implementation & systems design:** integrating peer support specialists in crisis and emergency response systems
+- **Help-seeking & stigma:** service access, stigma, and disparities among student and immigrant populations
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+**Quick links**
+- [CV (PDF)]({{ "/assets/files/SubinNa_CV.pdf" | relative_url }})
+- [Research]({{ "/publications/" | relative_url }})
+- [Teaching]({{ "/teaching/" | relative_url }})
