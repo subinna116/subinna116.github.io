@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: → Subin Na
+title: Subin Na
 first_name: Subin
 last_name: Na
 contact_note: >
@@ -61,6 +61,12 @@ bib_search: true
 
 # Dimensions
 max_width: 930px
+
+header_pages:
+  - about.md
+  - cv.md
+  - publications.md
+  - teaching.md
 
 # -----------------------------------------------------------------------------
 # Open Graph & Schema.org
@@ -154,7 +160,7 @@ newsletter:
 
 collections:
   books:
-    output: true
+    output: false
   news:
     defaults:
       layout: post
