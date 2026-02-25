@@ -30,6 +30,6 @@ I’m a PhD student in the School of Social Policy & Practice at the University 
 - **Help-seeking & stigma:** service access, stigma, and disparities among student and immigrant populations
 
 **Quick links**
-- [CV (PDF)]({{ "/assets/files/SubinNa_CV.pdf" | relative_url }})
+- [CV (PDF)]({{ "/assets/files/Subin_Na_CV.pdf" | relative_url }})
 - [Research]({{ "/publications/" | relative_url }})
 - [Teaching]({{ "/teaching/" | relative_url }})
