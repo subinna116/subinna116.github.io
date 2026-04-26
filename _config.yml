@@ -13,8 +13,7 @@ title                    : "Subin Na"
 title_separator          : "-"
 name                     : &name "Subin Na"
 description              : &description "Social Work Researcher & Mental Health Social Worker & Computational Social Scientist"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://subinna116.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
-                                                           # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+url                      : https://subinna.com
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "subinna116/subinna116.github.io"
 
