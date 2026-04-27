@@ -7,8 +7,27 @@ redirect_from:
   - /about.html
 ---
 
-I am a third-year PhD student in Social Welfare at the University of Pennsylvania's School of Social Policy & Practice. I study how mental health systems can better serve people in recovery, with a particular focus on the peer support workforce, mental health equity for Asian and immigrant communities, and the design of crisis care systems.
+I am a third-year PhD student in Social Welfare at the University of 
+Pennsylvania's School of Social Policy & Practice. I study how mental 
+health systems can be reshaped to better serve people in recovery, with 
+particular attention to the peer support workforce, mental health equity 
+for Asian and immigrant communities, and the design of crisis care.
 
-My interest in the gap between recovery values and everyday practice began in Korea, where I trained in mental health social work and first encountered how much institutional context shapes what care actually looks like. I am drawn to questions of equity and justice in mental health systems, particularly how structural and organizational factors reproduce or challenge disparities for marginalized communities. I approach these questions using quantitative and computational methods, including natural language processing, machine learning, structural equation modeling, and multilevel modeling, with the goal of producing evidence that is rigorous, interpretable, and useful to those working to change systems.
+My interest in this work was shaped by my training in mental health 
+social work in Korea, where the hardest things to sit with were not 
+only the limits of services but the stigma, the shame, and the absence 
+of the voices of people who actually lived through mental illness. My 
+doctoral work has extended these questions in new directions: toward 
+racial and cultural context as constitutive of mental health care, 
+toward lived experience and peer leadership as central rather than 
+supplementary, and toward computational methods that let me ask 
+different questions of large-scale data.
 
-When I am not working, I enjoy jogging, spending time at dog parks, playing board games, and cheering on the Philadelphia 76ers. Go Sixers! 🏀
+Methodologically, I work with quantitative and computational tools, 
+including natural language processing, machine learning, structural 
+equation modeling, and multilevel modeling. I try to use them in 
+service of evidence that practitioners, policymakers, and communities 
+can actually use.
+
+Outside of work, I enjoy jogging, spending time at dog parks, playing 
+board games, and cheering on the Philadelphia 76ers. Go Sixers! 🏀
