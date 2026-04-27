@@ -12,9 +12,3 @@ I am a third-year PhD student in Social Welfare at the University of Pennsylvani
 My interest in the gap between recovery values and everyday practice began in Korea, where I trained in mental health social work and first encountered how much institutional context shapes what care actually looks like. I am drawn to questions of equity and justice in mental health systems, particularly how structural and organizational factors reproduce or challenge disparities for marginalized communities. I approach these questions using quantitative and computational methods, including natural language processing, machine learning, structural equation modeling, and multilevel modeling, with the goal of producing evidence that is rigorous, interpretable, and useful to those working to change systems.
 
 When I am not working, I enjoy jogging, spending time at dog parks, playing board games, and cheering on the Philadelphia 76ers. Go Sixers! 🏀
-
-A passage I return to often:
-
-> "Social scientific research is and always will be tentative and imperfect. It does not claim to transform economics, sociology, and history into exact sciences. But by patiently searching for facts and patterns and calmly analyzing the economic, social, and political mechanisms that might explain them, it can inform democratic debate and focus attention on the right questions. It can help to redefine the terms of debate, unmask certain preconceived or fraudulent notions, and subject all positions to constant critical scrutiny."
->
-> — Thomas Piketty, *Capital in the Twenty-First Century*
