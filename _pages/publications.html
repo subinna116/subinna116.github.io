@@ -1,36 +1,88 @@
 ---
 layout: archive
-title: "Publications"
+title: "Research"
 permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
+<div class="research-intro">
+  <p>My research focuses on how mental health systems can better promote recovery and equity, particularly for people with serious mental illness and for racial and ethnic minority communities. I examine drivers of mental health service utilization and continuity of care, including stigma and discrimination, help-seeking, and culturally and linguistically appropriate services.</p>
+
+  <p>Across projects, I ask a common question: how do mental health systems translate recovery-oriented values into routine practice, and for whom do these translations succeed or fail? One strand of my research examines recovery-oriented practice and practitioner competencies. A second strand focuses on service access and utilization among marginalized communities, including patterns among Asian Americans and East Asian postsecondary students. A third strand centers on implementation and system design, including the integration of peer support specialists within mobile crisis teams and emergency response systems.</p>
+
+  <p>Methodologically, I use quantitative and computational approaches, including large-scale observational data and text-as-data methods, to produce transparent, policy-relevant evidence. My dissertation extends this work by using text-as-data methods to study the peer support workforce.</p>
+</div>
+
+{% if site.author.googlescholar %}
+  <p class="scholar-link">You can also find my articles on <a href="{{site.author.googlescholar}}" target="_blank">my Google Scholar profile</a>.</p>
+{% endif %}
+
 {% if site.publication_category %}
-  {% for category in site.publication_category  %}
+  {% for category in site.publication_category %}
     {% assign title_shown = false %}
+    {% assign pub_count = 0 %}
     {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
+      {% if post.category != category[0] %}{% continue %}{% endif %}
       {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
+        <h2 class="pub-category">{{ category[1].title }}</h2>
         {% assign title_shown = true %}
       {% endunless %}
-      {% include archive-single.html %}
+      {% assign pub_count = pub_count | plus: 1 %}
+      <p class="pub-entry">
+        <span class="pub-number">{{ pub_count }}.</span>
+        <span class="pub-citation">{{ post.citation }}</span>
+        {% if post.paperurl %}
+          <a href="{{ post.paperurl }}" target="_blank" class="pub-link">Read online</a>
+        {% endif %}
+      </p>
     {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
   {% endfor %}
 {% endif %}
 
-
-
+<style>
+  .research-intro {
+    margin-bottom: 2.5em;
+    line-height: 1.7;
+  }
+  .research-intro p {
+    margin-bottom: 1em;
+  }
+  .scholar-link {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 2em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #eee;
+  }
+  h2.pub-category {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding-bottom: 0.4em;
+    border-bottom: 2px solid #333;
+    font-size: 1.4em;
+  }
+  .pub-entry {
+    margin-bottom: 1.2em;
+    line-height: 1.6;
+    padding-left: 2.2em;
+    text-indent: -2.2em;
+  }
+  .pub-number {
+    font-weight: 600;
+    color: #555;
+    margin-right: 0.5em;
+  }
+  .pub-citation {
+    color: #222;
+  }
+  .pub-link {
+    margin-left: 0.4em;
+    font-size: 0.9em;
+    white-space: nowrap;
+  }
+  .pub-link::before {
+    content: "→ ";
+  }
+</style>
