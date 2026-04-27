@@ -7,19 +7,24 @@ author_profile: true
 
 {% include base_path %}
 
-<p style="margin-bottom: 1.5em; font-size: 1.05em;">
-  My full CV is available as a PDF.
-</p>
+<div class="cv-content">
+  <p style="margin-bottom: 1.5em; font-size: 1.05em;">
+    My full CV is available as a PDF.
+  </p>
 
-<a href="{{ base_path }}/files/cv_1.pdf" class="cv-button" target="_blank">
-  📄 Download CV (PDF)
-</a>
+  <a href="{{ base_path }}/files/cv.pdf" class="cv-button" target="_blank">
+    📄 Download CV (PDF)
+  </a>
 
-<p style="margin-top: 2em; color: #666; font-size: 0.9em;">
-  Last updated: March 2026
-</p>
+  <p style="margin-top: 2em; color: #666; font-size: 0.9em;">
+    Last updated: March 2026
+  </p>
+</div>
 
 <style>
+  .cv-content {
+    min-height: 60vh;
+  }
   .cv-button {
     display: inline-block;
     background-color: #011F5B;
