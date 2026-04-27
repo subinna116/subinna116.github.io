@@ -26,7 +26,7 @@ author_profile: true
       <p class="teaching-line">
         <span class="teaching-number">{{ idx }}.</span>
         <span class="teaching-title"><b>{{ post.title }}</b>{% if post.course_code %} <span class="course-code">({{ post.course_code }})</span>{% endif %}</span>
-        <span class="teaching-meta">{{ post.role }}{% if post.instructor %} (Instructor: {{ post.instructor }}){% endif %} · {{ post.venue }}{% if post.date %} · {{ post.date | date: "%B %Y" }}{% endif %}</span>
+        <span class="teaching-meta">{{ post.role }}{% if post.instructor %} (Instructor: {{ post.instructor }}){% endif %} · {{ post.venue }}{% if post.date %} · {{% if post.date %}{% assign m = post.date | date: "%-m" | plus: 0 %}{% if m <= 5 %} · Spring {{ post.date | date: "%Y" }}{% elsif m <= 7 %} · Summer {{ post.date | date: "%Y" }}{% else %} · Fall {{ post.date | date: "%Y" }}{% endif %}{% endif %}</span>
       </p>
       {% if post.description %}<p class="teaching-desc">{{ post.description }}</p>{% endif %}
 
@@ -78,7 +78,7 @@ author_profile: true
       <p class="teaching-line">
         <span class="teaching-number">{{ idx }}.</span>
         <span class="teaching-title"><b>{{ post.title }}</b></span>
-        <span class="teaching-meta">{{ post.role }}{% if post.instructor %} (Instructor: {{ post.instructor }}){% endif %} · {{ post.venue }}{% if post.date %} · {{ post.date | date: "%B %Y" }}{% endif %}</span>
+        <span class="teaching-meta">{{ post.role }}{% if post.instructor %} (Instructor: {{ post.instructor }}){% endif %} · {{ post.venue }}{% if post.date %} · {{% if post.date %}{% assign m = post.date | date: "%-m" | plus: 0 %}{% if m <= 5 %} · Spring {{ post.date | date: "%Y" }}{% elsif m <= 7 %} · Summer {{ post.date | date: "%Y" }}{% else %} · Fall {{ post.date | date: "%Y" }}{% endif %}{% endif %}</span>
       </p>
       {% if post.description %}<p class="teaching-desc">{{ post.description }}</p>{% endif %}
     </div>
