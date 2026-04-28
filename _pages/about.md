@@ -28,6 +28,3 @@ including natural language processing, machine learning, structural
 equation modeling, and multilevel modeling. I try to use them in 
 service of evidence that practitioners, policymakers, and communities 
 can actually use.
-
-Outside of work, I enjoy jogging, spending time at dog parks, playing 
-board games, and cheering on the Philadelphia 76ers. Go Sixers! 🏀
