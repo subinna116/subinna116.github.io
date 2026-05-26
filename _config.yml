@@ -11,7 +11,7 @@ locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Subin Na"
 title_separator          : "-"
-name                     : &name "Subin Na, MA, LSW"
+name                     : &name "Subin Na"
 description              : &description "Social Work Researcher & LSW & Computational Social Scientist"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://subinna.com
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -24,9 +24,9 @@ repository               : "subinna116/subinna116.github.io"
 author:
   # Biographic information
   avatar           : "profile_2.png"
-  name             : "Subin Na"
+  name             : "Subin Na, MA, LSW"
   pronouns         : "she/her"
-  bio              : "Social Work Researcher<br>Licensed Social Worker"
+  bio              : "Social Work Researcher<br>Computational Social Scientist<br>Licensed Social Worker"
   location         : "Philadelphia, PA"
   employer         : "University of Pennsylvania"
   uri              : "https://sp2.upenn.edu/person/subin-na/"
