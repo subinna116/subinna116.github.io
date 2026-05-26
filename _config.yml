@@ -9,9 +9,9 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Subin Na, MA, LSW"
+title                    : "Subin Na"
 title_separator          : "-"
-name                     : &name "Subin Na"
+name                     : &name "Subin Na, MA, LSW"
 description              : &description "Social Work Researcher & LSW & Computational Social Scientist"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://subinna.com
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
