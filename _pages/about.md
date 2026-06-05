@@ -21,7 +21,4 @@ not an add-on to it, and I put lived experience and peer leadership at
 the center of how care gets designed. I have also turned to computational 
 methods that let me ask different questions of large-scale data.
 
-Methodologically, I work with quantitative and computational tools, 
-including natural language processing, machine learning, structural 
-equation modeling, and multilevel modeling. I use them to build evidence 
-that practitioners, policymakers, and communities can act on.
+Methodologically, I use quantitative, computational, and mixed-methods approaches, including machine learning, natural language processing, structural equation modeling, multilevel modeling, and text-as-data methods. I use these tools to generate evidence that informs mental health policy, service delivery, and implementation.
