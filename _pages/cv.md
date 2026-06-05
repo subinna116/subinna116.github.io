@@ -17,7 +17,7 @@ author_profile: true
   </a>
 
   <p style="margin-top: 2em; color: #666; font-size: 0.9em;">
-    Last updated: May 2026
+    Last updated: June 2026
   </p>
 </div>
 
