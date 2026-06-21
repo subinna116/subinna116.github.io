@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Subin Na | Social Work Researcher, University of Pennsylvania"
+title: "Subin Na"
 author_profile: true
 redirect_from: 
   - /about/
