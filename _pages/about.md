@@ -1,6 +1,7 @@
 ---
 permalink: /
-title: "Subin Na, PhD Candidate in Social Welfare, University of Pennsylvania"
+title: "Subin Na"
+seo_title: "Subin Na, PhD Candidate in Social Welfare, University of Pennsylvania"
 author_profile: true
 redirect_from: 
   - /about/
