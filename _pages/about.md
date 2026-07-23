@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a third-year PhD student in Social Welfare at the University of 
+I am a PhD Candidate in Social Welfare at the University of 
 Pennsylvania's School of Social Policy & Practice. I study how mental health systems can be designed, implemented, and improved to promote recovery and equitable access to care. My work focuses on peer support services, help-seeking and service utilization, mental health equity among Asian and immigrant communities, and the implementation of innovative models of care.
 
 These questions grew out of my training as a mental health social worker 
