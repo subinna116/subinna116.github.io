@@ -1,10 +1,10 @@
 ---
-title: "Individual and Organizational Factors Influencing the Recovery-Promoting Competencies Among Mental Health Practitioners"
+title: "Individual and organizational factors influencing recovery-promoting competency among mental health practitioners"
 collection: publications
 category: manuscripts
 permalink: /publication/2026-recovery-promoting-competencies
-date: 2026-03-01
+date: 2026-09-01
 venue: 'Psychiatric Rehabilitation Journal'
 paperurl: 'https://doi.org/10.1037/prj0000683'
-citation: '<b>Na, S.</b>, &amp; Solomon, P. (2026). &quot;Individual and Organizational Factors Influencing the Recovery-Promoting Competencies Among Mental Health Practitioners.&quot; <i>Psychiatric Rehabilitation Journal</i>. (Online First).'
+citation: '<b>Na, S.</b>, &amp; Solomon, P. (2026). Individual and organizational factors influencing recovery-promoting competency among mental health practitioners. <i>Psychiatric Rehabilitation Journal, 49</i>(3), 276&ndash;288. https://doi.org/10.1037/prj0000683'
 ---
