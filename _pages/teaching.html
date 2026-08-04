@@ -36,6 +36,9 @@ author_profile: true
       </p>
       {% if post.description %}<p class="teaching-desc">{{ post.description }}</p>{% endif %}
 
+      {% assign _body = post.content | strip_html | strip %}
+      {% if _body != "" %}<p class="course-materials-link"><a href="{{ post.url }}">→ View slides &amp; lab materials</a></p>{% endif %}
+
       {% if post.has_evaluation %}
         <div class="eval-box">
           <div class="eval-header">
@@ -258,6 +261,20 @@ author_profile: true
   .eval-link a {
     color: #011F5B;
     font-weight: 500;
+  }
+
+  .course-materials-link {
+    margin-left: 2.2em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    font-size: 0.92em;
+  }
+  .course-materials-link a {
+    color: #011F5B;
+    font-weight: 600;
+  }
+  @media (max-width: 600px) {
+    .course-materials-link { margin-left: 0; }
   }
 
   @media (max-width: 600px) {
