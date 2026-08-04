@@ -52,4 +52,4 @@ Eleven weekly lab sessions. Each lab has **slides** (Beamer / LaTeX, as PDF) and
 | 10 | Inference for Regression | [PDF](/files/mssp6300/Lab10/Lab10_beamer.pdf) | [HTML](/files/mssp6300/Lab10/Lab10.html) |
 | 11 | Z-tests, T-tests, and Interaction Effects | [PDF](/files/mssp6300/Lab11/Lab11_beamer.pdf) | [HTML](/files/mssp6300/Lab11/Lab11.html) |
 
-All slides were prepared in LaTeX (Beamer) and the labs in R Markdown. Source files are available in the [course materials folder](/files/mssp6300/).
+All slides were prepared in LaTeX (Beamer) and the labs in R Markdown.
