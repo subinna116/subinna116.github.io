@@ -1,0 +1,247 @@
+%=====================================================================
+%  SHARED PREAMBLE — Quantitative Reasoning LAB 413 Beamer theme
+%  Paste this block VERBATIM at the top of every LabN_beamer.tex
+%  (keep each deck self-contained; do NOT \input this file).
+%  Compile: pdflatex LabN_beamer.tex   (run twice for footline counters)
+%=====================================================================
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+
+\usetheme{default}
+\usecolortheme{default}
+\useinnertheme{circles}
+
+\definecolor{qrnavy}{RGB}{20,44,90}
+\definecolor{qrblue}{RGB}{38,80,150}
+\definecolor{qrgray}{RGB}{90,95,105}
+\definecolor{qrlight}{RGB}{234,239,247}
+\definecolor{qrred}{RGB}{190,60,60}
+
+\setbeamercolor{structure}{fg=qrnavy}
+\setbeamercolor{frametitle}{fg=white,bg=qrnavy}
+\setbeamercolor{title}{fg=qrnavy}
+\setbeamercolor{block title}{fg=white,bg=qrblue}
+\setbeamercolor{block body}{bg=qrlight}
+\setbeamercolor{itemize item}{fg=qrblue}
+\setbeamercolor{itemize subitem}{fg=qrblue}
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,ht=3.2ex,dp=1.2ex,leftskip=0.3cm]{frametitle}%
+    \strut\insertframetitle\strut
+  \end{beamercolorbox}%
+}
+
+% Footline: course | lab N | slide number  (edit "Lab N" per deck)
+\newcommand{\labnum}{Lab 10}   % <-- SET THIS to the lab number, e.g. \renewcommand{\labnum}{Lab 3}
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.4ex,dp=1ex,leftskip=.3cm]{author in head/foot}%
+      \usebeamerfont{author in head/foot}\color{qrgray}\small Quantitative Reasoning -- LAB 413%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.4ex,dp=1ex,rightskip=.3cm]{title in head/foot}%
+      \usebeamerfont{title in head/foot}\color{qrgray}\small\hfill \labnum \quad\insertframenumber\,/\,\inserttotalframenumber%
+    \end{beamercolorbox}}%
+}
+
+% Number badge (01, 02, ...) used on concept slides:  \numbadge{01}
+\newtcbox{\numbadge}{on line,boxsep=2pt,left=4pt,right=4pt,top=2pt,bottom=2pt,
+  colback=qrnavy,colframe=qrnavy,fontupper=\bfseries\color{white},arc=2pt}
+
+% Key-concepts callout:  \begin{keybox} ... \end{keybox}   or  \begin{keybox}[Scenario] ...
+\newtcolorbox{keybox}[1][Key Concepts]{colback=qrlight,colframe=qrnavy,
+  fonttitle=\bfseries,title={#1},coltitle=white,arc=2pt,left=4pt,right=4pt,
+  top=3pt,bottom=3pt,boxrule=0.6pt}
+
+%---------------------------------------------------------------------
+%  Title data
+%---------------------------------------------------------------------
+\title{\bfseries Inference for Regression}
+\subtitle{Week 11 Recap \textbullet\ Lab 10}
+\author{Instructor: Subin Na}
+\institute{Quantitative Reasoning -- LAB 413}
+\date{November 12, 2025}
+
+\begin{document}
+
+%---------------------------------------------------------------------
+%  Title slide
+%---------------------------------------------------------------------
+{\setbeamertemplate{footline}{}
+\begin{frame}
+  \vfill
+  {\color{qrgray}\small Quantitative Reasoning -- LAB 413}\\[0.6em]
+  {\usebeamerfont{title}\color{qrnavy}\huge\bfseries Inference for Regression,\\[0.15em]Multivariate Regression \& Interaction Terms\par}
+  \vspace{0.4em}
+  {\color{qrblue}\large Week 11 Recap \ \textbullet\ \ Lab 10}\par
+  \vspace{1.6em}
+  {\color{qrgray} Instructor: \textbf{Subin Na} \hfill November 12, 2025}
+  \vfill
+\end{frame}
+}
+
+%---------------------------------------------------------------------
+%  Today's Plan
+%---------------------------------------------------------------------
+\begin{frame}{Today's Plan}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \textbf{\color{qrnavy}1. Quick Recap}
+      \begin{itemize}
+        \item Inference for Proportions (review)
+        \item Inference for Regression
+        \item OLS Assumptions
+        \item Multiple Regression Concept
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \vspace{2.2em}
+      \textbf{\color{qrnavy}2. RStudio Practice}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  01 Inference for Proportions (1)
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{01}\ \ Inference for Proportions (1)}
+  \begin{itemize}
+    \item We use sample proportions $\hat{p}$ to estimate the population
+          proportion $p$.
+    \item Because samples vary, $\hat{p}$ has its own \textbf{sampling
+          distribution} $\rightarrow$ roughly Normal if:
+      \begin{itemize}
+        \item Random sample
+        \item Expected successes $\geq 10$, failures $\geq 10$
+      \end{itemize}
+  \end{itemize}
+  \vspace{0.4em}
+  \begin{keybox}[Confidence Interval (CI)]
+    A \textbf{range of plausible population proportions}:
+    \begin{equation*}
+      \hat{p} \;\pm\; z^{*}\,\sqrt{\dfrac{\hat{p}(1-\hat{p})}{n}}
+    \end{equation*}
+  \end{keybox}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  01 Inference for Proportions (2) - worked example setup
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{01}\ \ Inference for Proportions (2)}
+  \begin{keybox}[Example]
+    In a sports study, \textbf{73 out of 150} athletes reported sleeping more
+    than 8 hours the previous night. Compute and interpret a \textbf{90\%
+    confidence interval} for this proportion.
+  \end{keybox}
+  \vspace{0.8em}
+  \begin{itemize}
+    \item Point estimate: $\hat{p} = \dfrac{73}{150} \approx 0.487$.
+    \item Critical value for a 90\% CI: $z^{*} = 1.645$.
+  \end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  Worked example - solution
+%---------------------------------------------------------------------
+\begin{frame}{Inference for Proportions: Solution}
+  Plug in and solve:
+  \vspace{0.4em}
+  \begin{align*}
+    \hat{p} \;\pm\; z^{*}\,\sqrt{\dfrac{\hat{p}(1-\hat{p})}{n}}
+      &= 0.487 \;\pm\; 1.645\,\sqrt{\dfrac{(0.487)(1-0.487)}{150}}\\[0.5em]
+      &= 0.487 \;\pm\; 0.067
+  \end{align*}
+  \vspace{0.2em}
+  \begin{center}
+    \begin{tcolorbox}[colback=qrlight,colframe=qrnavy,arc=2pt,boxrule=0.6pt,width=0.7\textwidth,halign=center]
+      90\% CI is $(0.420,\ 0.554)$
+    \end{tcolorbox}
+  \end{center}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  02 Inference for Regression
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{02}\ \ Inference for Regression}
+  \begin{itemize}
+    \item Regression estimates $(\hat{\beta}_0,\hat{\beta}_1)$ are statistics
+          computed from samples.
+    \item Each has a \textbf{sampling distribution} $\rightarrow$ uncertainty
+          measured by the standard error (SE).
+  \end{itemize}
+  \vspace{0.3em}
+  \begin{keybox}[Key Questions]
+    \begin{itemize}
+      \item Is the relationship \textbf{real} or due to chance?
+      \item How \textbf{precise} is our slope estimate?
+    \end{itemize}
+  \end{keybox}
+  \vspace{0.3em}
+  \begin{itemize}
+    \item $95\%$ CI $\approx \hat{\beta} \pm 1.96 \times \text{SE}$.
+    \item Reject $H_0$ if $p < 0.05$ ($\beta$ significantly different from $0$).
+  \end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  03 OLS Assumptions
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{03}\ \ OLS Assumptions}
+  \begin{itemize}
+    \item \textbf{Linearity} --- relationship between $X$ and $Y$ is linear.
+    \item \textbf{Random sampling} --- observations are independent and random.
+    \item \textbf{Exogeneity} --- errors uncorrelated with predictors.
+    \item \textbf{Homoskedasticity} --- constant error variance.
+    \item \textbf{Variation in $X$} --- predictors are not constant.
+  \end{itemize}
+  \vspace{0.6em}
+  \begin{center}
+    {\color{qrgray}\small (Violating these assumptions $\Rightarrow$ biased or
+    inefficient estimates.)}
+  \end{center}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  04 Multiple Regression Concept
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{04}\ \ Multiple Regression Concept}
+  \begin{keybox}[Model]
+    \begin{equation*}
+      Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \varepsilon
+    \end{equation*}
+  \end{keybox}
+  \vspace{0.4em}
+  \begin{itemize}
+    \item Adds more information and \textbf{controls for confounding}.
+    \item Each coefficient is interpreted \emph{holding other variables constant}.
+    \item Helps separate true effects from spurious associations.
+    \item Addresses \textbf{omitted variable bias} if relevant controls are included.
+  \end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  Transition to RStudio
+%---------------------------------------------------------------------
+{\setbeamertemplate{footline}{}
+\begin{frame}
+  \vfill
+  \centering
+  {\color{qrnavy}\Huge\bfseries RStudio Practice}\\[0.8em]
+  {\color{qrblue}\large Proportion Tests \& Inference for Regression}\\[0.4em]
+  {\color{qrgray} See \texttt{Lab10.Rmd} / \texttt{Lab10\_1112.R}}
+  \vfill
+\end{frame}
+}
+
+\end{document}

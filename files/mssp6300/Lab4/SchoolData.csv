@@ -1,0 +1,214 @@
+year_academic,id_school,name_school,sector,category,group,oss_denom,oss_0_numer,oss_0_pct,oss_1_numer,oss_1_pct,oss_2_numer,oss_2_pct,oss_3_numer,oss_3_pct,oss_4_numer,oss_4_pct,att_denom,att_95_numer,att_95_pct,grad_denom,grad_4_numer,grad_4_pct
+2018-2019,1010,John Bartram High School,District,All Students,All Students,683,579,84.77,84,12.3,14,2.05,6,0.88,0,0,683,174,25.48,159,94,59.12
+2018-2019,1020,West Philadelphia High School,District,All Students,All Students,501,421,84.03,61,12.18,12,2.4,4,0.8,3,0.6,501,68,13.57,114,70,61.40
+2018-2019,1030,High School of the Future,District,All Students,All Students,561,507,90.37,40,7.13,12,2.14,1,0.18,1,0.18,561,251,44.74,107,88,82.24
+2018-2019,1050,Paul Robeson High School for Human Services,District,All Students,All Students,323,308,95.36,14,4.33,1,0.31,0,0,0,0,323,122,37.77,76,71,93.42
+2018-2019,1100,William L. Sayre High School,District,All Students,All Students,539,418,77.55,83,15.4,30,5.57,6,1.11,2,0.37,539,84,15.58,103,55,53.40
+2018-2019,1130,William T. Tilden School,District,All Students,All Students,457,362,79.21,59,12.91,16,3.5,9,1.97,11,2.41,457,233,50.98,,,
+2018-2019,1190,Motivation High School,District,All Students,All Students,417,383,91.85,31,7.43,3,0.72,0,0,0,0,417,327,78.42,88,75,85.23
+2018-2019,1200,John Barry School,District,All Students,All Students,764,722,94.5,35,4.58,5,0.65,2,0.26,0,0,764,211,27.62,,,
+2018-2019,1230,William C. Bryant School,District,All Students,All Students,525,483,92,29,5.52,13,2.48,0,0,0,0,525,119,22.67,,,
+2018-2019,1250,Joseph W. Catharine School,District,All Students,All Students,536,534,99.63,1,0.19,1,0.19,0,0,0,0,536,246,45.9,,,
+2018-2019,1260,Benjamin B. Comegys School,District,All Students,All Students,566,527,93.11,16,2.83,11,1.94,8,1.41,4,0.71,566,187,33.04,,,
+2018-2019,1280,Sadie Alexander School,District,All Students,All Students,581,577,99.31,4,0.69,0,0,0,0,0,0,581,493,84.85,,,
+2018-2019,1290,Andrew Hamilton School,District,All Students,All Students,575,547,95.13,22,3.83,5,0.87,0,0,1,0.17,575,168,29.22,,,
+2018-2019,1300,Avery D. Harrington School,District,All Students,All Students,548,430,78.47,63,11.5,21,3.83,12,2.19,22,4.01,548,150,27.37,,,
+2018-2019,1340,Henry C. Lea School,District,All Students,All Students,568,496,87.32,44,7.75,15,2.64,4,0.7,9,1.58,568,254,44.72,,,
+2018-2019,1350,William C. Longstreth School,District,All Students,All Students,451,409,90.69,28,6.21,9,2,4,0.89,1,0.22,451,169,37.47,,,
+2018-2019,1360,Morton McMichael School,District,All Students,All Students,406,373,91.87,26,6.4,3,0.74,2,0.49,2,0.49,406,139,34.24,,,
+2018-2019,1370,S. Weir Mitchell School,District,All Students,All Students,626,555,88.66,31,4.95,16,2.56,5,0.8,19,3.04,626,189,30.19,,,
+2018-2019,1380,Thomas G. Morton School,District,All Students,All Students,658,652,99.09,2,0.3,3,0.46,1,0.15,0,0,658,259,39.36,,,
+2018-2019,1390,Samuel Powel School,District,All Students,All Students,257,252,98.05,4,1.56,0,0,0,0,1,0.39,257,185,71.98,,,
+2018-2019,1400,John M. Patterson School,District,All Students,All Students,579,579,100,0,0,0,0,0,0,0,0,579,344,59.41,,,
+2018-2019,1410,James Rhoads School,District,All Students,All Students,609,522,85.71,47,7.72,29,4.76,8,1.31,3,0.49,609,138,22.66,,,
+2018-2019,1420,Martha Washington School,District,All Students,All Students,385,361,93.77,19,4.94,4,1.04,0,0,1,0.26,385,160,41.56,,,
+2018-2019,1440,Penrose School,District,All Students,All Students,534,511,95.69,10,1.87,5,0.94,5,0.94,3,0.56,534,228,42.7,,,
+2018-2019,1460,Add B. Anderson School,District,All Students,All Students,526,452,85.93,48,9.13,12,2.28,9,1.71,5,0.95,526,198,37.64,,,
+2018-2019,1470,Alain Locke School,District,All Students,All Students,555,499,89.91,37,6.67,14,2.52,4,0.72,1,0.18,555,162,29.19,,,
+2018-2019,1490,Rudolph Blankenburg School,District,All Students,All Students,490,450,91.84,30,6.12,9,1.84,1,0.2,0,0,490,155,31.63,,,
+2018-2019,1580,Middle Years Alternative School,District,All Students,All Students,279,261,93.55,17,6.09,1,0.36,0,0,0,0,279,195,69.89,,,
+2018-2019,2000,South Philadelphia High School,District,All Students,All Students,717,613,85.5,66,9.21,27,3.77,8,1.12,3,0.42,717,185,25.8,176,97,55.11
+2018-2019,2010,Benjamin Franklin High School,District,All Students,All Students,510,415,81.37,67,13.14,16,3.14,10,1.96,2,0.39,510,94,18.43,124,72,58.06
+2018-2019,2020,High School for Creative and Performing Arts,District,All Students,All Students,751,737,98.14,13,1.73,1,0.13,0,0,0,0,751,562,74.83,179,171,95.53
+2018-2019,2050,Science Leadership Academy Middle School,District,All Students,All Students,284,282,99.3,2,0.7,0,0,0,0,0,0,284,195,68.66,,,
+2018-2019,2140,Julia R. Masterman School,District,All Students,All Students,1214,1213,99.92,1,0.08,0,0,0,0,0,0,1214,1082,89.13,110,110,100.00
+2018-2019,2160,Furness High School,District,All Students,All Students,753,648,86.06,64,8.5,20,2.66,11,1.46,10,1.33,753,243,32.27,194,144,74.23
+2018-2019,2190,D. Newlin Fell School,District,All Students,All Students,619,618,99.84,1,0.16,0,0,0,0,0,0,619,347,56.06,,,
+2018-2019,2210,Bache-Martin School,District,All Students,All Students,494,466,94.33,22,4.45,4,0.81,2,0.4,0,0,494,260,52.63,,,
+2018-2019,2240,F. Amedee Bregy School,District,All Students,All Students,380,354,93.16,19,5,5,1.32,1,0.26,1,0.26,380,165,43.42,,,
+2018-2019,2260,George W. Childs School,District,All Students,All Students,573,531,92.67,24,4.19,6,1.05,7,1.22,5,0.87,573,295,51.48,,,
+2018-2019,2290,Franklin Learning Center,District,All Students,All Students,968,957,98.86,10,1.03,1,0.1,0,0,0,0,968,478,49.38,223,196,87.89
+2018-2019,2320,Stephen Girard School,District,All Students,All Students,476,476,100,0,0,0,0,0,0,0,0,476,181,38.03,,,
+2018-2019,2340,General George A. McCall School,District,All Students,All Students,740,735,99.32,5,0.68,0,0,0,0,0,0,740,625,84.46,,,
+2018-2019,2370,Delaplaine McDaniel School,District,All Students,All Students,459,386,84.1,45,9.8,13,2.83,7,1.53,8,1.74,459,137,29.85,,,
+2018-2019,2380,William M. Meredith School,District,All Students,All Students,583,583,100,0,0,0,0,0,0,0,0,583,472,80.96,,,
+2018-2019,2390,Robert Morris School,District,All Students,All Students,292,276,94.52,12,4.11,3,1.03,1,0.34,0,0,292,120,41.1,,,
+2018-2019,2410,Girard Academic Music Program,District,All Students,All Students,628,622,99.04,4,0.64,2,0.32,0,0,0,0,628,469,74.68,62,62,100.00
+2018-2019,2450,Edwin M. Stanton School,District,All Students,All Students,325,313,96.31,10,3.08,1,0.31,0,0,1,0.31,325,155,47.69,,,
+2018-2019,2470,Albert M. Greenfield School,District,All Students,All Students,676,674,99.7,2,0.3,0,0,0,0,0,0,676,556,82.25,,,
+2018-2019,2480,Chester A. Arthur School,District,All Students,All Students,284,263,92.61,18,6.34,3,1.06,0,0,0,0,284,141,49.65,,,
+2018-2019,2490,Laura W. Waring School,District,All Students,All Students,326,303,92.94,19,5.83,4,1.23,0,0,0,0,326,104,31.9,,,
+2018-2019,2510,Andrew Jackson School,District,All Students,All Students,607,584,96.21,9,1.48,4,0.66,5,0.82,5,0.82,607,385,63.43,,,
+2018-2019,2520,Abram S. Jenks School,District,All Students,All Students,292,291,99.66,1,0.34,0,0,0,0,0,0,292,218,74.66,,,
+2018-2019,2540,Francis S. Key School,District,All Students,All Students,496,487,98.19,6,1.21,0,0,1,0.2,2,0.4,496,293,59.07,,,
+2018-2019,2580,Eliza B. Kirkbride School,District,All Students,All Students,571,566,99.12,4,0.7,0,0,0,0,1,0.18,571,449,78.63,,,
+2018-2019,2590,George W. Nebinger School,District,All Students,All Students,500,494,98.8,6,1.2,0,0,0,0,0,0,500,318,63.6,,,
+2018-2019,2620,Academy at Palumbo,District,All Students,All Students,1066,1053,98.78,12,1.13,1,0.09,0,0,0,0,1066,730,68.48,234,226,96.58
+2018-2019,2630,George W. Sharswood School,District,All Students,All Students,553,545,98.55,6,1.08,2,0.36,0,0,0,0,553,267,48.28,,,
+2018-2019,2640,Southwark School,District,All Students,All Students,936,914,97.65,15,1.6,2,0.21,3,0.32,2,0.21,936,637,68.06,,,
+2018-2019,2650,Science Leadership Academy,District,All Students,All Students,506,503,99.41,3,0.59,0,0,0,0,0,0,506,327,64.62,120,118,98.33
+2018-2019,2670,Constitution High School,District,All Students,All Students,394,383,97.21,9,2.28,2,0.51,0,0,0,0,394,194,49.24,110,105,95.45
+2018-2019,2680,The Science Leadership Academy at Beeber,District,All Students,All Students,557,552,99.1,5,0.9,0,0,0,0,0,0,557,372,66.79,120,114,95.00
+2018-2019,2690,John H. Taggart School,District,All Students,All Students,474,472,99.58,2,0.42,0,0,0,0,0,0,474,292,61.6,,,
+2018-2019,2720,Vare-Washington School,District,All Students,All Students,393,384,97.71,5,1.27,1,0.25,1,0.25,2,0.51,393,235,59.8,,,
+2018-2019,4020,Overbrook High School,District,All Students,All Students,646,467,72.29,101,15.63,43,6.66,25,3.87,10,1.55,646,80,12.38,152,71,46.71
+2018-2019,4030,High School of Engineering and Science,District,All Students,All Students,942,930,98.73,9,0.96,2,0.21,0,0,1,0.11,942,738,78.34,218,215,98.62
+2018-2019,4060,Murrell Dobbins Career and Technical High School,District,All Students,All Students,724,613,84.67,99,13.67,11,1.52,0,0,1,0.14,724,177,24.45,137,120,87.59
+2018-2019,4140,Strawberry Mansion High School,District,All Students,All Students,220,186,84.55,22,10,11,5,1,0.45,0,0,220,38,17.27,70,40,57.14
+2018-2019,4220,James G. Blaine School,District,All Students,All Students,492,457,92.89,21,4.27,11,2.24,1,0.2,2,0.41,492,161,32.72,,,
+2018-2019,4240,Lewis C. Cassidy Academics Plus School,District,All Students,All Students,513,436,84.99,50,9.75,12,2.34,10,1.95,5,0.97,513,176,34.31,,,
+2018-2019,4270,William Dick School,District,All Students,All Students,570,564,98.95,6,1.05,0,0,0,0,0,0,570,165,28.95,,,
+2018-2019,4280,Samuel Gompers School,District,All Students,All Students,372,323,86.83,30,8.06,7,1.88,6,1.61,6,1.61,372,158,42.47,,,
+2018-2019,4300,Edward Heston School,District,All Students,All Students,599,510,85.14,54,9.02,21,3.51,6,1,8,1.34,599,136,22.7,,,
+2018-2019,4320,Robert E. Lamberton School,District,All Students,All Students,564,459,81.38,44,7.8,25,4.43,9,1.6,27,4.79,564,264,46.81,,,
+2018-2019,4350,E. Washington Rhodes School,District,All Students,All Students,595,530,89.08,42,7.06,16,2.69,4,0.67,3,0.5,595,180,30.25,,,
+2018-2019,4360,Kenderton Elementary School,District,All Students,All Students,542,502,92.62,32,5.9,5,0.92,2,0.37,1,0.18,542,170,31.37,,,
+2018-2019,4370,Overbrook Elementary School,District,All Students,All Students,284,280,98.59,4,1.41,0,0,0,0,0,0,284,112,39.44,,,
+2018-2019,4380,Thomas M. Peirce School,District,All Students,All Students,487,452,92.81,21,4.31,11,2.26,2,0.41,1,0.21,487,133,27.31,,,
+2018-2019,4440,Dr. Ethel Allen School,District,All Students,All Students,532,512,96.24,14,2.63,4,0.75,2,0.38,0,0,532,148,27.82,,,
+2018-2019,4460,Tanner G. Duckrey School,District,All Students,All Students,668,634,94.91,23,3.44,8,1.2,1,0.15,2,0.3,668,136,20.36,,,
+2018-2019,4470,Richard R. Wright School,District,All Students,All Students,394,364,92.39,17,4.31,7,1.78,2,0.51,4,1.02,394,114,28.93,,,
+2018-2019,4480,Overbrook Educational Center,District,All Students,All Students,297,294,98.99,3,1.01,0,0,0,0,0,0,297,221,74.41,,,
+2018-2019,4530,Edward Gideon School,District,All Students,All Students,300,274,91.33,18,6,7,2.33,0,0,1,0.33,300,92,30.67,,,
+2018-2019,4560,William D. Kelley School,District,All Students,All Students,392,374,95.41,15,3.83,2,0.51,0,0,1,0.26,392,118,30.1,,,
+2018-2019,4570,General George G. Meade School,District,All Students,All Students,434,390,89.86,28,6.45,9,2.07,5,1.15,2,0.46,434,132,30.41,,,
+2018-2019,5020,Thomas A. Edison High School,District,All Students,All Students,1259,1074,85.31,135,10.72,34,2.7,10,0.79,6,0.48,1259,209,16.6,229,112,48.91
+2018-2019,5050,Philadelphia Military Academy,District,All Students,All Students,292,278,95.21,13,4.45,1,0.34,0,0,0,0,292,146,50,52,44,84.62
+2018-2019,5060,Jules E. Mastbaum Area Vocational Technical High School,District,All Students,All Students,773,596,77.1,101,13.07,44,5.69,23,2.98,9,1.16,773,166,21.47,160,137,85.63
+2018-2019,5070,Parkway Northwest High School,District,All Students,All Students,277,241,87,32,11.55,3,1.08,0,0,1,0.36,277,178,64.26,55,52,94.55
+2018-2019,5080,Parkway Center City Middle College High School,District,All Students,All Students,499,495,99.2,3,0.6,0,0,0,0,1,0.2,499,253,50.7,111,108,97.30
+2018-2019,5090,Parkway West High School,District,All Students,All Students,335,334,99.7,1,0.3,0,0,0,0,0,0,335,170,50.75,67,53,79.10
+2018-2019,5150,William W. Bodine High School,District,All Students,All Students,541,529,97.78,12,2.22,0,0,0,0,0,0,541,324,59.89,102,99,97.06
+2018-2019,5160,Penn Treaty High School,District,All Students,All Students,604,515,85.26,52,8.61,26,4.3,7,1.16,4,0.66,604,224,37.09,90,62,68.89
+2018-2019,5170,Julia de Burgos School,District,All Students,All Students,998,916,91.78,54,5.41,17,1.7,5,0.5,6,0.6,998,253,25.35,,,
+2018-2019,5180,Vaux High School: A Big Picture,District,All Students,All Students,258,156,60.47,64,24.81,22,8.53,12,4.65,4,1.55,258,53,20.54,,,
+2018-2019,5200,Alexander Adaire School,District,All Students,All Students,456,455,99.78,0,0,1,0.22,0,0,0,0,456,314,68.86,,,
+2018-2019,5210,Henry A. Brown School,District,All Students,All Students,490,475,96.94,10,2.04,3,0.61,0,0,2,0.41,490,222,45.31,,,
+2018-2019,5230,Russell H. Conwell School,District,All Students,All Students,372,365,98.12,6,1.61,1,0.27,0,0,0,0,372,245,65.86,,,
+2018-2019,5250,Paul L. Dunbar School,District,All Students,All Students,304,293,96.38,9,2.96,1,0.33,0,0,1,0.33,304,133,43.75,,,
+2018-2019,5260,Lewis Elkin School,District,All Students,All Students,873,848,97.14,16,1.83,6,0.69,2,0.23,1,0.11,873,293,33.56,,,
+2018-2019,5300,Horatio B. Hackett School,District,All Students,All Students,386,385,99.74,1,0.26,0,0,0,0,0,0,386,196,50.78,,,
+2018-2019,5320,John F. Hartranft School,District,All Students,All Students,571,537,94.05,23,4.03,5,0.88,4,0.7,2,0.35,571,211,36.95,,,
+2018-2019,5330,William H. Hunter School,District,All Students,All Students,591,562,95.09,17,2.88,5,0.85,4,0.68,3,0.51,591,192,32.49,,,
+2018-2019,5340,James R. Ludlow School,District,All Students,All Students,328,313,95.43,7,2.13,4,1.22,2,0.61,2,0.61,328,137,41.77,,,
+2018-2019,5350,William McKinley School,District,All Students,All Students,464,448,96.55,12,2.59,2,0.43,1,0.22,1,0.22,464,163,35.13,,,
+2018-2019,5370,John Moffet School,District,All Students,All Students,327,327,100,0,0,0,0,0,0,0,0,327,185,56.57,,,
+2018-2019,5390,Potter-Thomas School,District,All Students,All Students,592,557,94.09,28,4.73,4,0.68,3,0.51,0,0,592,178,30.07,,,
+2018-2019,5400,Richmond School,District,All Students,All Students,587,582,99.15,2,0.34,2,0.34,0,0,1,0.17,587,264,44.97,,,
+2018-2019,5410,Isaac A. Sheppard School,District,All Students,All Students,202,201,99.5,1,0.5,0,0,0,0,0,0,202,56,27.72,,,
+2018-2019,5420,John Welsh School,District,All Students,All Students,404,377,93.32,20,4.95,6,1.49,1,0.25,0,0,404,168,41.58,,,
+2018-2019,5430,Alternative Middle Years at James Martin,District,All Students,All Students,440,394,89.55,34,7.73,6,1.36,2,0.45,4,0.91,440,257,58.41,,,
+2018-2019,5440,Frances E. Willard School,District,All Students,All Students,773,761,98.45,9,1.16,3,0.39,0,0,0,0,773,269,34.8,,,
+2018-2019,5470,William Cramp School,District,All Students,All Students,545,543,99.63,1,0.18,1,0.18,0,0,0,0,545,204,37.43,,,
+2018-2019,5480,General Philip Kearny School,District,All Students,All Students,333,294,88.29,29,8.71,9,2.7,1,0.3,0,0,333,124,37.24,,,
+2018-2019,5490,Cayuga School,District,All Students,All Students,523,485,92.73,14,2.68,10,1.91,8,1.53,6,1.15,523,180,34.42,,,
+2018-2019,5500,Thurgood Marshall School,District,All Students,All Students,810,755,93.21,30,3.7,16,1.98,4,0.49,5,0.62,810,293,36.17,,,
+2018-2019,5520,Kensington High School for Creative and Performing Arts,District,All Students,All Students,585,517,88.38,53,9.06,13,2.22,2,0.34,0,0,585,140,23.93,128,93,72.66
+2018-2019,5530,Philip H. Sheridan School,District,All Students,All Students,736,735,99.86,1,0.14,0,0,0,0,0,0,736,241,32.74,,,
+2018-2019,5550,Kensington Health Sciences Academy,District,All Students,All Students,512,449,87.7,45,8.79,11,2.15,6,1.17,1,0.2,512,194,37.89,108,81,75.00
+2018-2019,5560,Spring Garden School,District,All Students,All Students,307,302,98.37,5,1.63,0,0,0,0,0,0,307,141,45.93,,,
+2018-2019,5590,John H. Webster School,District,All Students,All Students,846,804,95.04,23,2.72,13,1.54,5,0.59,1,0.12,846,295,34.87,,,
+2018-2019,5610,Building 21,District,All Students,All Students,364,321,88.19,36,9.89,5,1.37,2,0.55,0,0,364,110,30.22,74,65,87.84
+2018-2019,5620,The U School,District,All Students,All Students,285,226,79.3,44,15.44,14,4.91,1,0.35,0,0,285,44,15.44,56,43,76.79
+2018-2019,5660,The LINC,District,All Students,All Students,254,214,84.25,32,12.6,6,2.36,1,0.39,1,0.39,254,46,18.11,53,42,79.25
+2018-2019,5680,Honorable Luis Munoz-Marin School,District,All Students,All Students,681,664,97.5,8,1.17,3,0.44,3,0.44,3,0.44,681,339,49.78,,,
+2018-2019,5700,Kensington High School,District,All Students,All Students,628,575,91.56,40,6.37,9,1.43,4,0.64,0,0,628,119,18.95,111,68,61.26
+2018-2019,6010,Central High School,District,All Students,All Students,2405,2348,97.63,54,2.25,3,0.12,0,0,0,0,2405,2058,85.57,557,548,98.38
+2018-2019,6030,Roxborough High School,District,All Students,All Students,824,646,78.4,111,13.47,38,4.61,14,1.7,15,1.82,824,227,27.55,171,120,70.18
+2018-2019,6040,Walter B. Saul High School,District,All Students,All Students,497,460,92.56,35,7.04,2,0.4,0,0,0,0,497,167,33.6,119,113,94.96
+2018-2019,6050,Philadelphia High School for Girls,District,All Students,All Students,856,817,95.44,35,4.09,4,0.47,0,0,0,0,856,454,53.04,269,251,93.31
+2018-2019,6060,Martin Luther King High School,District,All Students,All Students,708,569,80.37,77,10.88,31,4.38,21,2.97,10,1.41,708,196,27.68,167,82,49.10
+2018-2019,6090,A. Philip Randolph Career and Technical High School,District,All Students,All Students,432,375,86.81,52,12.04,4,0.93,0,0,1,0.23,432,96,22.22,100,77,77.00
+2018-2019,6200,Anna B. Day School,District,All Students,All Students,539,529,98.14,9,1.67,0,0,1,0.19,0,0,539,235,43.6,,,
+2018-2019,6210,Franklin S. Edmonds School,District,All Students,All Students,692,662,95.66,24,3.47,4,0.58,2,0.29,0,0,692,332,47.98,,,
+2018-2019,6220,Eleanor C. Emlen School,District,All Students,All Students,407,398,97.79,4,0.98,5,1.23,0,0,0,0,407,183,44.96,,,
+2018-2019,6230,Fitler Academics Plus School,District,All Students,All Students,275,272,98.91,3,1.09,0,0,0,0,0,0,275,152,55.27,,,
+2018-2019,6250,Charles W. Henry School,District,All Students,All Students,524,510,97.33,8,1.53,3,0.57,2,0.38,1,0.19,524,359,68.51,,,
+2018-2019,6260,Henry H. Houston School,District,All Students,All Students,378,357,94.44,16,4.23,4,1.06,0,0,1,0.26,378,210,55.56,,,
+2018-2019,6270,Jenks Academy for Arts and Sciences,District,All Students,All Students,532,531,99.81,1,0.19,0,0,0,0,0,0,532,377,70.86,,,
+2018-2019,6300,James Logan School,District,All Students,All Students,350,347,99.14,3,0.86,0,0,0,0,0,0,350,164,46.86,,,
+2018-2019,6310,John F. McCloskey School,District,All Students,All Students,391,361,92.33,18,4.6,7,1.79,4,1.02,1,0.26,391,184,47.06,,,
+2018-2019,6320,Thomas Mifflin School,District,All Students,All Students,329,320,97.26,6,1.82,3,0.91,0,0,0,0,329,174,52.89,,,
+2018-2019,6340,Joseph Pennell School,District,All Students,All Students,476,441,92.65,20,4.2,9,1.89,4,0.84,2,0.42,476,182,38.24,,,
+2018-2019,6350,Samuel Pennypacker School,District,All Students,All Students,440,423,96.14,12,2.73,3,0.68,0,0,2,0.45,440,159,36.14,,,
+2018-2019,6360,Theodore Roosevelt School,District,All Students,All Students,650,563,86.62,52,8,24,3.69,10,1.54,1,0.15,650,282,43.38,,,
+2018-2019,6380,Shawmont School,District,All Students,All Students,508,507,99.8,1,0.2,0,0,0,0,0,0,508,305,60.04,,,
+2018-2019,6390,Edward T. Steel School,District,All Students,All Students,638,558,87.46,43,6.74,17,2.66,9,1.41,11,1.72,638,156,24.45,,,
+2018-2019,6410,Cook-Wissahickon School,District,All Students,All Students,503,489,97.22,9,1.79,2,0.4,2,0.4,1,0.2,503,302,60.04,,,
+2018-2019,6440,Anna L. Lingelbach School,District,All Students,All Students,437,424,97.03,10,2.29,3,0.69,0,0,0,0,437,209,47.83,,,
+2018-2019,6450,James Dobson School,District,All Students,All Students,283,267,94.35,10,3.53,5,1.77,1,0.35,0,0,283,151,53.36,,,
+2018-2019,6460,Hill-Freedman World Academy,District,All Students,All Students,713,676,94.81,25,3.51,8,1.12,3,0.42,1,0.14,713,515,72.23,103,79,76.70
+2018-2019,6470,John B. Kelly School,District,All Students,All Students,704,686,97.44,14,1.99,3,0.43,0,0,1,0.14,704,225,31.96,,,
+2018-2019,6480,Academy for the Middle Years at Northwest,District,All Students,All Students,329,320,97.26,7,2.13,2,0.61,0,0,0,0,329,229,69.6,,,
+2018-2019,6540,Lankenau High School,District,All Students,All Students,357,341,95.52,16,4.48,0,0,0,0,0,0,357,227,63.59,76,74,97.37
+2018-2019,7010,Frankford High School,District,All Students,All Students,1120,938,83.75,125,11.16,39,3.48,14,1.25,4,0.36,1120,237,21.16,263,150,57.03
+2018-2019,7100,Jay Cooke School,District,All Students,All Students,511,491,96.09,17,3.33,3,0.59,0,0,0,0,511,158,30.92,,,
+2018-2019,7110,Warren G. Harding School,District,All Students,All Students,912,660,72.37,137,15.02,58,6.36,31,3.4,26,2.85,912,405,44.41,,,
+2018-2019,7120,Samuel Fels High School,District,All Students,All Students,1118,900,80.5,141,12.61,47,4.2,16,1.43,14,1.25,1118,302,27.01,226,158,69.91
+2018-2019,7130,General Louis Wagner School,District,All Students,All Students,564,544,96.45,16,2.84,4,0.71,0,0,0,0,564,305,54.08,,,
+2018-2019,7150,Juniata Park Academy,District,All Students,All Students,1206,1148,95.19,49,4.06,6,0.5,1,0.08,2,0.17,1206,633,52.49,,,
+2018-2019,7200,Clara Barton School,District,All Students,All Students,736,736,100,0,0,0,0,0,0,0,0,736,285,38.72,,,
+2018-2019,7220,Laura H. Carnell School,District,All Students,All Students,1063,1027,96.61,25,2.35,7,0.66,3,0.28,1,0.09,1063,362,34.05,,,
+2018-2019,7260,Ellwood School,District,All Students,All Students,340,335,98.53,4,1.18,0,0,1,0.29,0,0,340,175,51.47,,,
+2018-2019,7270,Thomas K. Finletter School,District,All Students,All Students,835,749,89.7,61,7.31,17,2.04,5,0.6,3,0.36,835,453,54.25,,,
+2018-2019,7280,Benjamin Franklin School,District,All Students,All Students,1005,931,92.64,50,4.98,13,1.29,8,0.8,3,0.3,1005,661,65.77,,,
+2018-2019,7290,Allen M. Stearne School,District,All Students,All Students,597,498,83.42,51,8.54,32,5.36,11,1.84,5,0.84,597,190,31.83,,,
+2018-2019,7300,Francis Hopkinson School,District,All Students,All Students,1008,973,96.53,22,2.18,12,1.19,0,0,1,0.1,1008,402,39.88,,,
+2018-2019,7310,Feltonville Intermediate School,District,All Students,All Students,790,773,97.85,13,1.65,3,0.38,1,0.13,0,0,790,443,56.08,,,
+2018-2019,7320,Julia W. Howe School,District,All Students,All Students,305,301,98.69,4,1.31,0,0,0,0,0,0,305,145,47.54,,,
+2018-2019,7330,Henry W. Lawton School,District,All Students,All Students,857,854,99.65,3,0.35,0,0,0,0,0,0,857,289,33.72,,,
+2018-2019,7350,James R. Lowell School,District,All Students,All Students,813,791,97.29,16,1.97,4,0.49,1,0.12,1,0.12,813,350,43.05,,,
+2018-2019,7360,John Marshall School,District,All Students,All Students,459,445,96.95,8,1.74,5,1.09,1,0.22,0,0,459,155,33.77,,,
+2018-2019,7370,"Grover Washington, Jr. School",District,All Students,All Students,644,551,85.56,54,8.39,18,2.8,14,2.17,7,1.09,644,439,68.17,,,
+2018-2019,7380,Alexander K. McClure School,District,All Students,All Students,739,722,97.7,11,1.49,6,0.81,0,0,0,0,739,282,38.16,,,
+2018-2019,7390,Andrew J. Morrison School,District,All Students,All Students,811,765,94.33,29,3.58,10,1.23,6,0.74,1,0.12,811,396,48.83,,,
+2018-2019,7400,Olney School,District,All Students,All Students,949,908,95.68,26,2.74,7,0.74,7,0.74,1,0.11,949,503,53,,,
+2018-2019,7430,James J. Sullivan School,District,All Students,All Students,905,902,99.67,3,0.33,0,0,0,0,0,0,905,297,32.82,,,
+2018-2019,7440,Bayard Taylor School,District,All Students,All Students,588,561,95.41,19,3.23,4,0.68,2,0.34,2,0.34,588,187,31.8,,,
+2018-2019,7460,William H. Ziegler School,District,All Students,All Students,629,584,92.85,29,4.61,5,0.79,7,1.11,4,0.64,629,284,45.15,,,
+2018-2019,7470,Bridesburg School,District,All Students,All Students,829,820,98.91,9,1.09,0,0,0,0,0,0,829,394,47.53,,,
+2018-2019,7490,Prince Hall School,District,All Students,All Students,586,571,97.44,13,2.22,1,0.17,1,0.17,0,0,586,261,44.54,,,
+2018-2019,7500,Feltonville School of Arts and Sciences,District,All Students,All Students,682,654,95.89,16,2.35,3,0.44,7,1.03,2,0.29,682,433,63.49,,,
+2018-2019,7510,Mary M. Bethune School,District,All Students,All Students,721,671,93.07,37,5.13,9,1.25,3,0.42,1,0.14,721,185,25.66,,,
+2018-2019,7530,William Rowen School,District,All Students,All Students,500,492,98.4,6,1.2,2,0.4,0,0,0,0,500,245,49,,,
+2018-2019,7730,Roberto Clemente School,District,All Students,All Students,478,456,95.4,19,3.97,1,0.21,1,0.21,1,0.21,478,266,55.65,,,
+2018-2019,8010,Abraham Lincoln High School,District,All Students,All Students,2038,1796,88.13,173,8.49,51,2.5,11,0.54,7,0.34,2038,763,37.44,402,260,64.68
+2018-2019,8020,Northeast High School,District,All Students,All Students,3698,3318,89.72,268,7.25,68,1.84,19,0.51,25,0.68,3698,1537,41.56,768,586,76.30
+2018-2019,8030,George Washington High School,District,All Students,All Students,1530,1349,88.17,123,8.04,42,2.75,9,0.59,7,0.46,1530,553,36.14,371,264,71.16
+2018-2019,8040,Arts Academy at Benjamin Rush,District,All Students,All Students,621,614,98.87,6,0.97,1,0.16,0,0,0,0,621,422,67.95,143,141,98.60
+2018-2019,8090,Swenson Arts and Technology High School,District,All Students,All Students,654,623,95.26,29,4.43,2,0.31,0,0,0,0,654,297,45.41,169,161,95.27
+2018-2019,8120,Woodrow Wilson School,District,All Students,All Students,1485,1278,86.06,127,8.55,42,2.83,19,1.28,19,1.28,1485,877,59.06,,,
+2018-2019,8140,Austin Meehan School,District,All Students,All Students,740,625,84.46,70,9.46,26,3.51,13,1.76,6,0.81,740,279,37.7,,,
+2018-2019,8160,Baldi School,District,All Students,All Students,1569,1458,92.93,78,4.97,18,1.15,8,0.51,7,0.45,1569,1077,68.64,,,
+2018-2019,8200,Ethan Allen School,District,All Students,All Students,1159,1130,97.5,22,1.9,5,0.43,2,0.17,0,0,1159,787,67.9,,,
+2018-2019,8210,Joseph H. Brown School,District,All Students,All Students,688,681,98.98,6,0.87,1,0.15,0,0,0,0,688,266,38.66,,,
+2018-2019,8230,Kennedy C. Crossan School,District,All Students,All Students,363,361,99.45,2,0.55,0,0,0,0,0,0,363,223,61.43,,,
+2018-2019,8240,Hamilton Disston School,District,All Students,All Students,1013,944,93.19,55,5.43,10,0.99,3,0.3,1,0.1,1013,340,33.56,,,
+2018-2019,8250,Edwin Forrest School,District,All Students,All Students,1294,1259,97.3,23,1.78,5,0.39,5,0.39,2,0.15,1294,556,42.97,,,
+2018-2019,8260,Fox Chase School,District,All Students,All Students,531,531,100,0,0,0,0,0,0,0,0,531,280,52.73,,,
+2018-2019,8270,Thomas Holme School,District,All Students,All Students,669,639,95.52,22,3.29,6,0.9,1,0.15,1,0.15,669,321,47.98,,,
+2018-2019,8300,Mayfair School,District,All Students,All Students,2117,2050,96.84,48,2.27,10,0.47,3,0.14,6,0.28,2117,1529,72.22,,,
+2018-2019,8310,J. Hampton Moore School,District,All Students,All Students,1284,1274,99.22,10,0.78,0,0,0,0,0,0,1284,672,52.34,,,
+2018-2019,8340,Solomon Solis-Cohen School,District,All Students,All Students,1340,1326,98.96,7,0.52,4,0.3,1,0.07,2,0.15,1340,689,51.42,,,
+2018-2019,8350,Gilbert Spruance School,District,All Students,All Students,1508,1439,95.42,54,3.58,11,0.73,2,0.13,2,0.13,1508,733,48.61,,,
+2018-2019,8360,Rhawnhurst School,District,All Students,All Students,703,703,100,0,0,0,0,0,0,0,0,703,404,57.47,,,
+2018-2019,8370,Watson Comly School,District,All Students,All Students,553,553,100,0,0,0,0,0,0,0,0,553,332,60.04,,,
+2018-2019,8380,Louis H. Farrell School,District,All Students,All Students,1238,1223,98.79,13,1.05,2,0.16,0,0,0,0,1238,801,64.7,,,
+2018-2019,8390,A.L. Fitzpatrick School,District,All Students,All Students,896,840,93.75,37,4.13,12,1.34,4,0.45,3,0.33,896,442,49.33,,,
+2018-2019,8400,Anne Frank School,District,All Students,All Students,1429,1412,98.81,11,0.77,5,0.35,0,0,1,0.07,1429,966,67.6,,,
+2018-2019,8410,Robert B. Pollock School,District,All Students,All Students,717,681,94.98,24,3.35,10,1.39,1,0.14,1,0.14,717,323,45.05,,,
+2018-2019,8420,Stephen Decatur School,District,All Students,All Students,1042,1003,96.26,27,2.59,9,0.86,0,0,3,0.29,1042,566,54.32,,,
+2018-2019,8430,Joseph Greenberg School,District,All Students,All Students,838,837,99.88,1,0.12,0,0,0,0,0,0,838,679,81.03,,,
+2018-2019,8440,William H. Loesche School,District,All Students,All Students,957,951,99.37,5,0.52,1,0.1,0,0,0,0,957,533,55.69,,,
+2018-2019,8560,The Workshop School,District,All Students,All Students,258,243,94.19,11,4.26,3,1.16,0,0,1,0.39,258,102,39.53,66,57,86.36
+2018-2019,8770,John Hancock Demonstration School,District,All Students,All Students,817,791,96.82,19,2.33,5,0.61,0,0,2,0.24,817,425,52.02,,,

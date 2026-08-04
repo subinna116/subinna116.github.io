@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quantitative Reasoning — LAB 413 · Lab Materials</title>
+<style>
+  :root{
+    --navy:#142c5a; --blue:#265096; --gray:#5a5f69; --light:#eaeff7;
+    --bg:#ffffff; --card:#ffffff; --border:#dbe2ee; --text:#1c2330;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0f141c; --card:#161d29; --border:#28313f; --text:#e6ebf3;
+           --light:#1b2534; --gray:#9aa4b4; --blue:#7aa2e0; --navy:#c9d7f0; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       background:var(--bg);color:var(--text);line-height:1.5}
+  header{background:var(--navy);color:#fff;padding:2.4rem 1.2rem 2rem}
+  header .wrap{max-width:900px;margin:0 auto}
+  header .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+  header h1{margin:.3rem 0 .2rem;font-size:1.9rem}
+  header p{margin:0;opacity:.9}
+  main{max-width:900px;margin:0 auto;padding:1.6rem 1.2rem 3rem}
+  .intro{color:var(--gray);margin:.4rem 0 1.6rem}
+  .lab{background:var(--card);border:1px solid var(--border);border-radius:10px;
+       padding:1rem 1.1rem;margin:.7rem 0;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+  .num{flex:0 0 auto;width:46px;height:46px;border-radius:8px;background:var(--navy);color:#fff;
+       display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.05rem}
+  .meta{flex:1 1 260px;min-width:0}
+  .meta .date{font-size:.78rem;color:var(--gray)}
+  .meta .title{font-weight:600;font-size:1.05rem;color:var(--navy)}
+  .links{flex:0 0 auto;display:flex;gap:.5rem;flex-wrap:wrap}
+  .btn{display:inline-block;padding:.42rem .8rem;border-radius:7px;font-size:.85rem;
+       text-decoration:none;border:1px solid var(--border);color:var(--blue);background:var(--light);
+       white-space:nowrap;transition:.15s}
+  .btn:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .btn.slides{}
+  footer{max-width:900px;margin:0 auto;padding:0 1.2rem 3rem;color:var(--gray);font-size:.82rem}
+  code{background:var(--light);padding:.1rem .35rem;border-radius:4px;font-size:.85em}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="kicker">Quantitative Reasoning · LAB 413</div>
+    <h1>Lab Session Materials</h1>
+    <p>Instructor: Subin Na &nbsp;·&nbsp; Fall 2025</p>
+  </div>
+</header>
+<main>
+  <p class="intro">Eleven weekly lab sessions. Each lab has <strong>slides</strong> (Beamer / LaTeX &rarr; PDF)
+  and an <strong>R notebook</strong> (R Markdown &rarr; HTML, with code and output). Data files are bundled in each lab folder.</p>
+
+  <div class="lab"><div class="num">1</div><div class="meta"><div class="date">September 3, 2025</div><div class="title">Introduction to R</div></div>
+    <div class="links"><a class="btn slides" href="Lab1/Lab1_beamer.pdf">Slides (PDF)</a><a class="btn" href="Lab1/Lab1.html">R notebook</a></div></div>
+
+  <div class="lab"><div class="num">2</div><div class="meta"><div class="date">September 10, 2025</div><div class="title">Describing Data &amp; Relationships</div></div>
+    <div class="links"><a class="btn slides" href="Lab2/Lab2_beamer.pdf">Slides (PDF)</a><a class="btn" href="Lab2/Lab2.html">R notebook</a></div></div>
+
+  <div class="lab"><div class="num">3</div><div class="meta"><div class="date">September 17, 2025</div><div class="title">Regression &amp; Residuals</div></div>
+    <div class="links"><a class="btn slides" href="Lab3/Lab3_beamer.pdf">Slides (PDF)</a><a class="btn" href="Lab3/Lab3.html">R notebook</a></div></div>
+
+  <div class="lab"><div class="num">4</div><div class="meta"><div class="date">September 24, 2025</div><div class="title">Causation, Experimental Design &amp; Sampling</div></div>
+    <div class="links"><a class="btn slides" href="Lab4/Lab4_beamer.pdf">Slides (PDF)</a><a class="btn" href="Lab4/Lab4.html">R notebook</a></div></div>
+
+  <div class="lab"><div class="num">5</div><div class="meta"><div class="date">October 1, 2025</div><div class="title">Probability &amp; Sampling Distributions</div></div>
+    <div class="links"><a class="btn slides" href="Lab5/Lab5_beamer.pdf">Slides (PDF)</a><a class="btn" href="Lab5/Lab5.html">R notebook</a></div></div>
+
+  <div class="lab"><div class="num">6</div><div class="meta"><div class="date">October 15, 2025</div><div class="title">Confidence Intervals &amp; Hypothesis Testing</div></div>
+    <div class="links"><a class="btn slides" href="Lab6/Lab6_beamer.pdf">Slides (PDF)</a><a class="btn" href="Lab6/Lab6.html">R notebook</a></div></div>
+
+  <div class="lab"><div class="num">7</div><div class="meta"><div class="date">October 22, 2025</div><div class="title">Confidence Intervals &amp; Hypothesis Testing (Week 9 Recap)</div></div>
+    <div class="links"><a class="btn slides" href="Lab7/Lab7_beamer.pdf">Slides (PDF)</a><a class="btn" href="Lab7/Lab7.html">R notebook</a></div></div>
+
+  <div class="lab"><div class="num">8</div><div class="meta"><div class="date">October 29, 2025</div><div class="title">t-Distributions &amp; Inferences for Means</div></div>
+    <div class="links"><a class="btn slides" href="Lab8/Lab8_beamer.pdf">Slides (PDF)</a><a class="btn" href="Lab8/Lab8.html">R notebook</a></div></div>
+
+  <div class="lab"><div class="num">9</div><div class="meta"><div class="date">November 5, 2025</div><div class="title">Inference for Proportions &amp; Two-Proportion Comparison</div></div>
+    <div class="links"><a class="btn slides" href="Lab9/Lab9_beamer.pdf">Slides (PDF)</a><a class="btn" href="Lab9/Lab9.html">R notebook</a></div></div>
+
+  <div class="lab"><div class="num">10</div><div class="meta"><div class="date">November 12, 2025</div><div class="title">Inference for Regression</div></div>
+    <div class="links"><a class="btn slides" href="Lab10/Lab10_beamer.pdf">Slides (PDF)</a><a class="btn" href="Lab10/Lab10.html">R notebook</a></div></div>
+
+  <div class="lab"><div class="num">11</div><div class="meta"><div class="date">November 19, 2025</div><div class="title">Z-tests, T-tests &amp; Interaction Effects</div></div>
+    <div class="links"><a class="btn slides" href="Lab11/Lab11_beamer.pdf">Slides (PDF)</a><a class="btn" href="Lab11/Lab11.html">R notebook</a></div></div>
+
+</main>
+<footer>
+  Source files: each lab folder holds <code>LabN_beamer.tex</code> (LaTeX source), <code>LabN_beamer.pdf</code>,
+  <code>LabN.Rmd</code> (R Markdown source), <code>LabN.html</code>, and any data files.
+  Shared Beamer theme: <code>_style/qrlab413_preamble.tex</code>.
+</footer>
+</body>
+</html>

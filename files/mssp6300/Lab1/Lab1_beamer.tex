@@ -1,0 +1,163 @@
+%=====================================================================
+%  SHARED PREAMBLE — Quantitative Reasoning LAB 413 Beamer theme
+%  Paste this block VERBATIM at the top of every LabN_beamer.tex
+%  (keep each deck self-contained; do NOT \input this file).
+%  Compile: pdflatex LabN_beamer.tex   (run twice for footline counters)
+%=====================================================================
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+
+\usetheme{default}
+\usecolortheme{default}
+\useinnertheme{circles}
+
+\definecolor{qrnavy}{RGB}{20,44,90}
+\definecolor{qrblue}{RGB}{38,80,150}
+\definecolor{qrgray}{RGB}{90,95,105}
+\definecolor{qrlight}{RGB}{234,239,247}
+\definecolor{qrred}{RGB}{190,60,60}
+
+\setbeamercolor{structure}{fg=qrnavy}
+\setbeamercolor{frametitle}{fg=white,bg=qrnavy}
+\setbeamercolor{title}{fg=qrnavy}
+\setbeamercolor{block title}{fg=white,bg=qrblue}
+\setbeamercolor{block body}{bg=qrlight}
+\setbeamercolor{itemize item}{fg=qrblue}
+\setbeamercolor{itemize subitem}{fg=qrblue}
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,ht=3.2ex,dp=1.2ex,leftskip=0.3cm]{frametitle}%
+    \strut\insertframetitle\strut
+  \end{beamercolorbox}%
+}
+
+% Footline: course | lab N | slide number  (edit "Lab N" per deck)
+\newcommand{\labnum}{Lab 1}   % <-- SET THIS to the lab number, e.g. \renewcommand{\labnum}{Lab 3}
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.4ex,dp=1ex,leftskip=.3cm]{author in head/foot}%
+      \usebeamerfont{author in head/foot}\color{qrgray}\small Quantitative Reasoning -- LAB 413%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.4ex,dp=1ex,rightskip=.3cm]{title in head/foot}%
+      \usebeamerfont{title in head/foot}\color{qrgray}\small\hfill \labnum \quad\insertframenumber\,/\,\inserttotalframenumber%
+    \end{beamercolorbox}}%
+}
+
+% Number badge (01, 02, ...) used on concept slides:  \numbadge{01}
+\newtcbox{\numbadge}{on line,boxsep=2pt,left=4pt,right=4pt,top=2pt,bottom=2pt,
+  colback=qrnavy,colframe=qrnavy,fontupper=\bfseries\color{white},arc=2pt}
+
+% Key-concepts callout:  \begin{keybox} ... \end{keybox}   or  \begin{keybox}[Scenario] ...
+\newtcolorbox{keybox}[1][Key Concepts]{colback=qrlight,colframe=qrnavy,
+  fonttitle=\bfseries,title={#1},coltitle=white,arc=2pt,left=4pt,right=4pt,
+  top=3pt,bottom=3pt,boxrule=0.6pt}
+
+%---------------------------------------------------------------------
+%  Title data
+%---------------------------------------------------------------------
+\title{\bfseries Introduction to R}
+\subtitle{Lab 1}
+\author{Instructor: Subin Na}
+\institute{Quantitative Reasoning -- LAB 413}
+\date{September 3, 2025}
+
+\begin{document}
+
+%---------------------------------------------------------------------
+%  Title slide
+%---------------------------------------------------------------------
+{\setbeamertemplate{footline}{}
+\begin{frame}
+  \vfill
+  {\color{qrgray}\small Quantitative Reasoning -- LAB 413}\\[0.6em]
+  {\usebeamerfont{title}\color{qrnavy}\huge\bfseries Introduction to R\par}
+  \vspace{0.4em}
+  {\color{qrblue}\large Lab 1}\par
+  \vspace{1.6em}
+  {\color{qrgray} Instructor: \textbf{Subin Na} \hfill September 3, 2025}
+  \vfill
+\end{frame}
+}
+
+%---------------------------------------------------------------------
+%  Today's Plan
+%---------------------------------------------------------------------
+\begin{frame}{Today's Plan}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \textbf{\color{qrnavy}1. Introduction}
+      \begin{itemize}
+        \item Getting started with RStudio
+        \item Installing \& loading packages
+        \item Working directory setup
+        \item Basic R commands
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \textbf{\color{qrnavy}2. RStudio Practice}
+      \begin{itemize}
+        \item Working with data frames
+        \item Describe data
+        \item Histograms \& boxplots
+        \item Visualization with \texttt{ggplot2}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  01 A little about me  (ice-breaker; personal photos skipped)
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{01}\ \ A Little About Me}
+  \begin{keybox}[Introductions]
+    A quick introduction from your instructor --- background, research
+    interests, and a few things outside of statistics.
+  \end{keybox}
+  \vspace{0.6em}
+  \begin{center}
+    {\color{qrgray}\small Instructor: \textbf{Subin Na}}
+  \end{center}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  02 A little about you  (ice-breaker)
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{02}\ \ A Little About You}
+  \textbf{\color{qrnavy}Introduce yourself:}
+  \begin{itemize}
+    \item Your name
+    \item Your program / year
+    \item Any previous experience with R (or other stats software such as
+          SPSS, Stata, Mplus, etc.)
+    \item One fun fact or hobby you'd like to share!
+    \item Mac / Windows user?
+  \end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  Transition to RStudio
+%---------------------------------------------------------------------
+{\setbeamertemplate{footline}{}
+\begin{frame}
+  \vfill
+  \centering
+  {\color{qrnavy}\Huge\bfseries RStudio Practice}\\[0.8em]
+  {\color{qrblue}\large Getting Started with R}\\[0.4em]
+  {\color{qrgray} See \texttt{Lab1.Rmd} / \texttt{Lab1\_0903.R}}
+  \vfill
+\end{frame}
+}
+
+\end{document}

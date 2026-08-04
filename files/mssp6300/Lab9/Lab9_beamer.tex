@@ -1,0 +1,359 @@
+%=====================================================================
+%  Quantitative Reasoning - LAB 413
+%  Lab 9: Inference for Proportions & Difference in Two Proportions
+%  Instructor: Subin Na
+%  Beamer conversion of Lab9_1105_PPT.pptx
+%  Compile: pdflatex Lab9_beamer.tex   (run twice for footline counters)
+%=====================================================================
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+
+\usetheme{default}
+\usecolortheme{default}
+\useinnertheme{circles}
+
+\definecolor{qrnavy}{RGB}{20,44,90}
+\definecolor{qrblue}{RGB}{38,80,150}
+\definecolor{qrgray}{RGB}{90,95,105}
+\definecolor{qrlight}{RGB}{234,239,247}
+\definecolor{qrred}{RGB}{190,60,60}
+
+\setbeamercolor{structure}{fg=qrnavy}
+\setbeamercolor{frametitle}{fg=white,bg=qrnavy}
+\setbeamercolor{title}{fg=qrnavy}
+\setbeamercolor{block title}{fg=white,bg=qrblue}
+\setbeamercolor{block body}{bg=qrlight}
+\setbeamercolor{itemize item}{fg=qrblue}
+\setbeamercolor{itemize subitem}{fg=qrblue}
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,ht=3.2ex,dp=1.2ex,leftskip=0.3cm]{frametitle}%
+    \strut\insertframetitle\strut
+  \end{beamercolorbox}%
+}
+
+% Footline: course | lab N | slide number  (edit "Lab N" per deck)
+\newcommand{\labnum}{Lab 9}
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.4ex,dp=1ex,leftskip=.3cm]{author in head/foot}%
+      \usebeamerfont{author in head/foot}\color{qrgray}\small Quantitative Reasoning -- LAB 413%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.4ex,dp=1ex,rightskip=.3cm]{title in head/foot}%
+      \usebeamerfont{title in head/foot}\color{qrgray}\small\hfill \labnum \quad\insertframenumber\,/\,\inserttotalframenumber%
+    \end{beamercolorbox}}%
+}
+
+% Number badge (01, 02, ...) used on concept slides:  \numbadge{01}
+\newtcbox{\numbadge}{on line,boxsep=2pt,left=4pt,right=4pt,top=2pt,bottom=2pt,
+  colback=qrnavy,colframe=qrnavy,fontupper=\bfseries\color{white},arc=2pt}
+
+% Key-concepts callout:  \begin{keybox} ... \end{keybox}   or  \begin{keybox}[Scenario] ...
+\newtcolorbox{keybox}[1][Key Concepts]{colback=qrlight,colframe=qrnavy,
+  fonttitle=\bfseries,title={#1},coltitle=white,arc=2pt,left=4pt,right=4pt,
+  top=3pt,bottom=3pt,boxrule=0.6pt}
+
+%---------------------------------------------------------------------
+%  Title data
+%---------------------------------------------------------------------
+\title{\bfseries Inference for Proportions \& Difference in Two Proportions}
+\subtitle{Week 11 Recap \textbullet\ Lab 9}
+\author{Instructor: Subin Na}
+\institute{Quantitative Reasoning -- LAB 413}
+\date{November 5, 2025}
+
+\begin{document}
+
+%---------------------------------------------------------------------
+%  Title slide
+%---------------------------------------------------------------------
+{\setbeamertemplate{footline}{}
+\begin{frame}
+  \vfill
+  {\color{qrgray}\small Quantitative Reasoning -- LAB 413}\\[0.6em]
+  {\usebeamerfont{title}\color{qrnavy}\huge\bfseries Inference for Proportions\\[0.15em]\& Difference in Two Proportions\par}
+  \vspace{0.4em}
+  {\color{qrblue}\large Week 11 Recap \ \textbullet\ \ Lab 9}\par
+  \vspace{1.6em}
+  {\color{qrgray} Instructor: \textbf{Subin Na} \hfill November 5, 2025}
+  \vfill
+\end{frame}
+}
+
+%---------------------------------------------------------------------
+%  Today's Plan
+%---------------------------------------------------------------------
+\begin{frame}{Today's Plan}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \textbf{\color{qrnavy}1. Quick Recap}
+      \begin{itemize}
+        \item Bernoulli \& Binomial Foundations
+        \item Sampling Distribution of $\hat{p}$
+        \item Confidence Interval for a Single Proportion
+        \item Hypothesis Test for a Single Proportion
+        \item Comparing Two Proportions
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \phantom{\textbf{x}}
+      \vspace{4.2em}
+
+      \textbf{\color{qrnavy}2. RStudio Practice}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  01 Bernoulli & Binomial Foundations
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{01}\ \ Bernoulli \& Binomial Foundations}
+  \begin{itemize}
+    \item \textbf{Bernoulli trial:} one trial $\rightarrow$ outcome $0$ or $1$ (failure/success).
+    \item \textbf{Binomial distribution:} $X = $ number of successes in $n$ independent Bernoulli trials.
+  \end{itemize}
+  \begin{equation*}
+    E[X] = np, \qquad \mathrm{Var}[X] = np(1-p)
+  \end{equation*}
+  \begin{itemize}
+    \item \textbf{Sample proportion} $\hat{p} = X/n$ $\rightarrow$ point estimate for the population proportion $p$.
+  \end{itemize}
+  \begin{keybox}[Example]
+    Among $n = 200$ voters, $X = 120$ support Candidate A
+    $\;\Rightarrow\; \hat{p} = 120/200 = 0.60$.
+  \end{keybox}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  02 Sampling Distribution of p-hat
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{02}\ \ Sampling Distribution of $\hat{p}$}
+  \begin{keybox}
+    If the sample is random and large enough ($n\hat{p} \ge 10$ and $n(1-\hat{p}) \ge 10$),
+    the sampling distribution of $\hat{p}$ is approximately Normal.
+  \end{keybox}
+  \vspace{0.6em}
+  \begin{equation*}
+    \hat{p} \;\sim\; N\!\left(p,\ \sqrt{\frac{p(1-p)}{n}}\right)
+  \end{equation*}
+  \begin{itemize}
+    \item $\hat{p}$ is an \textbf{unbiased estimator}: on average $\hat{p} = p$.
+    \item The \textbf{standard error} $\sqrt{p(1-p)/n}$ shrinks as $n$ grows $\rightarrow$ more stable estimates.
+  \end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  03 Confidence Interval for a Single Proportion
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{03}\ \ Confidence Interval for a Single Proportion}
+  \begin{columns}[T]
+    \begin{column}{0.52\textwidth}
+      \begin{equation*}
+        \hat{p} \;\pm\; z^{*}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
+      \end{equation*}
+      {\small where $z^{*} \approx 1.645$ (90\%), $1.96$ (95\%), $2.576$ (99\%).}
+      \vspace{0.5em}
+      \begin{keybox}[Plus-Four Adjustment]
+        \small If counts are small, add 2 successes and 2 failures:
+        $\displaystyle \tilde{p} = \frac{X+2}{n+4}$.
+      \end{keybox}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \textbf{\color{qrnavy}Conditions}
+      \begin{itemize}
+        \item Random sample.
+        \item At least 10 expected successes \& failures.
+      \end{itemize}
+      \vspace{0.4em}
+      \textbf{\color{qrnavy}Interpretation}
+      \begin{itemize}
+        \item If we repeatedly sampled, $\approx C\%$ of intervals would capture the true $p$.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  Example: Dogs vs Cats - setup
+%---------------------------------------------------------------------
+\begin{frame}{Example: Dogs vs.\ Cats --- Setup}
+  \begin{keybox}[Scenario]
+    A quick campus poll asks: ``Do you prefer dogs over cats?''
+    \begin{itemize}
+      \item Random sample of $n = 600$ students.
+      \item $x = 372$ answered ``Yes.''
+    \end{itemize}
+  \end{keybox}
+  \vspace{0.6em}
+  \begin{center}
+    \textbf{Goal:} estimate the true proportion $p$ of all students who prefer dogs,
+    and construct a \textbf{90\% confidence interval} for $p$.
+  \end{center}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  Example: Dogs vs Cats - solution
+%---------------------------------------------------------------------
+\begin{frame}{Example: Dogs vs.\ Cats --- Solution}
+  \small
+  \textbf{\color{qrnavy}Given.} $n = 600,\ x = 372,\ \hat{p} = 372/600 = 0.62$.
+
+  \textbf{\color{qrnavy}Conditions.} $n\hat{p} = 372 > 10,\ n(1-\hat{p}) = 228 > 10.$ \checkmark
+  \vspace{0.3em}
+  \begin{align*}
+    SE &= \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.62(0.38)}{600}} = 0.0196\\[0.3em]
+    \hat{p} \pm z^{*} SE &= 0.62 \pm 1.645(0.0196) = 0.62 \pm 0.032 \;\Rightarrow\; (0.588,\ 0.652)
+  \end{align*}
+  \begin{tcolorbox}[colback=qrlight,colframe=qrnavy,arc=2pt,boxrule=0.6pt]
+    \small The 90\% CI for the proportion who prefer dogs over cats is $(58.8\%,\ 65.2\%)$,
+    based on a method that would capture the true proportion about 90\% of the time.
+  \end{tcolorbox}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  04 Hypothesis Test for a Single Proportion
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{04}\ \ Hypothesis Test for a Single Proportion}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Hypotheses}
+        \[ H_0: p = p_0 \qquad H_a: p \neq p_0 \]
+      \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Test statistic}
+        \[ z = \frac{\hat{p} - p_0}{\sqrt{p_0(1-p_0)/n}} \]
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vspace{0.4em}
+  \begin{keybox}
+    Reject $H_0$ when the test statistic is more extreme than the critical value
+    --- equivalently, when the $p$-value is smaller than $\alpha$.
+  \end{keybox}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  04 Example: Boba tea vs coffee
+%---------------------------------------------------------------------
+\begin{frame}{Example: Boba Tea vs.\ Coffee}
+  \small
+  \textbf{\color{qrnavy}Setup.} Out of $n = 20$ students, $13$ prefer boba tea over coffee,
+  so $\hat{p} = 0.65$. Test whether this differs from $0.5$.
+  \vspace{0.3em}
+  \begin{align*}
+    z &= \frac{0.65 - 0.5}{\sqrt{0.5(1-0.5)/20}} = 1.34\\[0.3em]
+    p\text{-value} &= 2\,P(Z > 1.34) = 2 \times 0.0901 = 0.18
+  \end{align*}
+  \begin{tcolorbox}[colback=qrlight,colframe=qrred,arc=2pt,boxrule=0.6pt]
+    \small $p = 0.18 > \alpha = 0.05 \;\Rightarrow\;$ \textbf{fail to reject} $H_0$.
+    Not enough evidence that the true proportion differs from $0.5$.
+    (``Fail to reject'' does \emph{not} prove $H_0$ true.)
+  \end{tcolorbox}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  05 Comparing Two Proportions
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{05}\ \ Comparing Two Proportions}
+  \textbf{Goal:} test or estimate the difference between two independent populations.
+  \begin{equation*}
+    (\hat{p}_1 - \hat{p}_2) \;\pm\; z^{*}\sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1} + \frac{\hat{p}_2(1-\hat{p}_2)}{n_2}}
+  \end{equation*}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \textbf{\color{qrnavy}Conditions}
+      \begin{itemize}
+        \item Two independent random samples.
+        \item Each sample has $\ge 10$ expected successes \& failures.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \textbf{\color{qrnavy}Interpretation}
+      \begin{itemize}
+        \item CI includes 0 $\rightarrow$ no significant difference.
+        \item CI excludes 0 $\rightarrow$ significant difference.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  Example: Pineapple on pizza - setup
+%---------------------------------------------------------------------
+\begin{frame}{Example: Pineapple on Pizza --- Setup}
+  \begin{keybox}[Scenario]
+    Among students, does support for pineapple on pizza differ by gender?
+    Two independent samples:
+    \begin{itemize}
+      \item Women: $328$ of $537$ said ``yes.''
+      \item Men: $234$ of $532$ said ``yes.''
+    \end{itemize}
+  \end{keybox}
+  \vspace{0.6em}
+  \begin{center}
+    \textbf{Goal:} construct a \textbf{95\% confidence interval} for the difference $p_1 - p_2$
+    and decide whether the difference is statistically significant.
+  \end{center}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  Example: Pineapple on pizza - solution
+%---------------------------------------------------------------------
+\begin{frame}{Example: Pineapple on Pizza --- Solution}
+  \small
+  \textbf{\color{qrnavy}Given.} $\hat{p}_1 = 0.611$ (women), $\hat{p}_2 = 0.440$ (men).
+  Both samples meet the $\ge 10$ successes \& failures condition. \checkmark
+  \begin{align*}
+    SE &= \sqrt{\frac{0.611(1-0.611)}{537} + \frac{0.440(1-0.440)}{532}} = 0.030\\[0.3em]
+    (\hat{p}_1 - \hat{p}_2) \pm z^{*} SE &= (0.611 - 0.440) \pm 1.96(0.030) = 0.171 \pm 0.059\\[0.2em]
+    &\Rightarrow\; 95\%\ \text{CI} = (0.112,\ 0.230)
+  \end{align*}
+  \begin{tcolorbox}[colback=qrlight,colframe=qrnavy,arc=2pt,boxrule=0.6pt]
+    \small The 95\% CI for the difference (women $-$ men) is $(0.112,\ 0.230)$.
+    Since it excludes 0, women are significantly more likely to approve pineapple on pizza.
+  \end{tcolorbox}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  06 Key Takeaways
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{06}\ \ Key Takeaways}
+  \begin{keybox}
+    \begin{itemize}
+      \item When $n$ is large enough, the sampling distribution of $\hat{p}$ is approximately Normal $\rightarrow$ we can use $z$ procedures.
+      \item A confidence interval is always \textbf{estimate $\pm$ margin of error}: for proportions, $\hat{p} \pm z^{*} \times SE$.
+      \item A hypothesis test compares the sample statistic to the null value using a $z$-score (distance in standard-error units).
+      \item Always check conditions first: random sample and large-sample thresholds ($\ge 10$ expected successes \& failures).
+      \item Two-proportion procedures follow the same logic as two-sample mean tests --- only the formulas change.
+    \end{itemize}
+  \end{keybox}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  Transition to RStudio
+%---------------------------------------------------------------------
+{\setbeamertemplate{footline}{}
+\begin{frame}
+  \vfill
+  \centering
+  {\color{qrnavy}\Huge\bfseries RStudio Practice}\\[0.8em]
+  {\color{qrblue}\large Comparing Means: Two-Sample $t$-test (McGrath Experiment)}\\[0.4em]
+  {\color{qrgray} See \texttt{Lab9.Rmd} / \texttt{Lab9\_1105.R}}
+  \vfill
+\end{frame}
+}
+
+\end{document}

@@ -1,0 +1,347 @@
+%=====================================================================
+%  Quantitative Reasoning - LAB 413
+%  Lab 6: Confidence Intervals & Hypothesis Testing Basics (Week 7 Recap)
+%  Instructor: Subin Na
+%  Beamer conversion of Lab6_1015_PPT.pptx
+%  Compile: pdflatex Lab6_beamer.tex   (run twice for footline counters)
+%=====================================================================
+\documentclass[aspectratio=169,11pt]{beamer}
+
+%---------------------------------------------------------------------
+%  Packages
+%---------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+
+%---------------------------------------------------------------------
+%  QR-Lab 413 theme  (shared across all 11 labs)
+%---------------------------------------------------------------------
+\usetheme{default}
+\usecolortheme{default}
+\useinnertheme{circles}
+
+\definecolor{qrnavy}{RGB}{20,44,90}
+\definecolor{qrblue}{RGB}{38,80,150}
+\definecolor{qrgray}{RGB}{90,95,105}
+\definecolor{qrlight}{RGB}{234,239,247}
+\definecolor{qrred}{RGB}{190,60,60}
+
+\setbeamercolor{structure}{fg=qrnavy}
+\setbeamercolor{frametitle}{fg=white,bg=qrnavy}
+\setbeamercolor{title}{fg=qrnavy}
+\setbeamercolor{block title}{fg=white,bg=qrblue}
+\setbeamercolor{block body}{bg=qrlight}
+\setbeamercolor{itemize item}{fg=qrblue}
+\setbeamercolor{itemize subitem}{fg=qrblue}
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,ht=3.2ex,dp=1.2ex,leftskip=0.3cm]{frametitle}%
+    \strut\insertframetitle\strut
+  \end{beamercolorbox}%
+}
+
+% Footline: course | lab N | slide number  (edit "Lab N" per deck)
+\newcommand{\labnum}{Lab 6}
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.4ex,dp=1ex,leftskip=.3cm]{author in head/foot}%
+      \usebeamerfont{author in head/foot}\color{qrgray}\small Quantitative Reasoning -- LAB 413%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.4ex,dp=1ex,rightskip=.3cm]{title in head/foot}%
+      \usebeamerfont{title in head/foot}\color{qrgray}\small\hfill \labnum \quad\insertframenumber\,/\,\inserttotalframenumber%
+    \end{beamercolorbox}}%
+}
+
+% Number badge (01, 02, ...) used on concept slides:  \numbadge{01}
+\newtcbox{\numbadge}{on line,boxsep=2pt,left=4pt,right=4pt,top=2pt,bottom=2pt,
+  colback=qrnavy,colframe=qrnavy,fontupper=\bfseries\color{white},arc=2pt}
+
+% Key-concepts callout:  \begin{keybox} ... \end{keybox}   or  \begin{keybox}[Scenario] ...
+\newtcolorbox{keybox}[1][Key Concepts]{colback=qrlight,colframe=qrnavy,
+  fonttitle=\bfseries,title={#1},coltitle=white,arc=2pt,left=4pt,right=4pt,
+  top=3pt,bottom=3pt,boxrule=0.6pt}
+
+%---------------------------------------------------------------------
+%  Title data
+%---------------------------------------------------------------------
+\title{\bfseries Confidence Intervals \& Hypothesis Testing}
+\subtitle{Week 7 Recap \textbullet\ Lab 6}
+\author{Instructor: Subin Na}
+\institute{Quantitative Reasoning -- LAB 413}
+\date{October 15, 2025}
+
+\begin{document}
+
+%---------------------------------------------------------------------
+%  Title slide
+%---------------------------------------------------------------------
+{\setbeamertemplate{footline}{}
+\begin{frame}
+  \vfill
+  {\color{qrgray}\small Quantitative Reasoning -- LAB 413}\\[0.6em]
+  {\usebeamerfont{title}\color{qrnavy}\huge\bfseries Confidence Intervals\\[0.15em]\& Hypothesis Testing\par}
+  \vspace{0.4em}
+  {\color{qrblue}\large Week 7 Recap \ \textbullet\ \ Lab 6}\par
+  \vspace{1.6em}
+  {\color{qrgray} Instructor: \textbf{Subin Na} \hfill October 15, 2025}
+  \vfill
+\end{frame}
+}
+
+%---------------------------------------------------------------------
+%  Today's Plan
+%---------------------------------------------------------------------
+\begin{frame}{Today's Plan}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \textbf{\color{qrnavy}1. Quick Recap}
+      \begin{itemize}
+        \item Overview
+        \item Confidence Interval
+        \item How CIs Behave
+        \item Hypothesis Testing
+        \item $p$-Values \& Significance
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \phantom{\textbf{x}}
+      \vspace{1.6em}
+
+      \textbf{\color{qrnavy}2. RStudio Practice}
+      \begin{itemize}
+        \item Regression CIs on the \texttt{Prestige} data
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  01 Overview   (RECREATE concept boxes)
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{01}\ \ Overview}
+  \begin{itemize}
+    \item \textbf{Goal:} Quantify the uncertainty behind point estimates using probability.
+    \item Two types of statistical inference:
+  \end{itemize}
+  \vspace{0.6em}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{tcolorbox}[colback=white,colframe=qrnavy,arc=3pt,halign title=center,
+        title=\bfseries Confidence Intervals,coltitle=white,colbacktitle=qrnavy]
+        \centering estimate \textbf{population parameters}
+      \end{tcolorbox}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{tcolorbox}[colback=white,colframe=qrnavy,arc=3pt,halign title=center,
+        title=\bfseries Hypothesis Tests,coltitle=white,colbacktitle=qrnavy]
+        \centering assess \textbf{evidence about claims} concerning the population
+      \end{tcolorbox}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  02 Confidence Intervals (1)
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{02}\ \ Confidence Intervals (1)}
+  \begin{keybox}
+    \begin{itemize}
+      \item \textbf{Point estimate:} a single best guess of the parameter
+            (often incorrect because of sampling variability).
+      \item \textbf{Confidence interval (CI):} a range of plausible values for
+            the parameter.
+    \end{itemize}
+  \end{keybox}
+  \vspace{0.6em}
+  \textbf{\color{qrnavy}Formula}
+  \begin{equation*}
+    \text{CI} \;=\; \text{point estimate} \;\pm\; \underbrace{\text{margin of error}}_{\text{random variation from sampling}}
+  \end{equation*}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  02 Confidence Intervals (2)  -- components of the formula
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{02}\ \ Confidence Intervals (2)}
+  \begin{equation*}
+    \text{CI} \;=\; \bar{x} \;\pm\; z^{*}\cdot\frac{\sigma}{\sqrt{n}}
+  \end{equation*}
+  \vspace{0.2em}
+  \begin{itemize}
+    \item $\bar{x}$ : sample mean
+    \item $z^{*}$ : critical value based on our confidence level
+    \item $\dfrac{\sigma}{\sqrt{n}}$ : standard error --- how much the sample mean
+          varies from sample to sample
+  \end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  02 Confidence Intervals (3)  -- interpretation
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{02}\ \ Confidence Intervals (3)}
+  \begin{keybox}[Interpretation]
+    A \textbf{95\% CI} means: if we repeated our sampling process many times,
+    about \textbf{95\% of those intervals} would contain the true population
+    parameter.
+  \end{keybox}
+  \vspace{0.8em}
+  \begin{center}
+  \begin{align*}
+    \text{CI}_{90}   &= \bar{x} \;\pm\; 1.645\cdot \text{SE}\\[0.3em]
+    \text{CI}_{95}   &= \bar{x} \;\pm\; 1.96\cdot \text{SE}\\[0.3em]
+    \text{CI}_{99.7} &= \bar{x} \;\pm\; 2.576\cdot \text{SE}
+  \end{align*}
+  \end{center}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  03 How CIs Behave
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{03}\ \ How CIs Behave}
+  \begin{keybox}
+    The width of a confidence interval is driven by the \textbf{margin of error}.
+  \end{keybox}
+  \vspace{0.6em}
+  \textbf{\color{qrnavy}The CI gets smaller when:}
+  \begin{itemize}
+    \item the confidence level decreases (smaller $z^{*}$),
+    \item the population SD decreases (smaller $\sigma$),
+    \item the sample size increases (larger $n$).
+  \end{itemize}
+  \vspace{0.5em}
+  \begin{center}
+    $\bar{x} \;\pm\; z^{*}\cdot\dfrac{\sigma}{\sqrt{n}}$
+  \end{center}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  Worked example -- setup
+%---------------------------------------------------------------------
+\begin{frame}{Worked Example: Sleep Hours}
+  \begin{keybox}[Scenario]
+    The director of public health in Philadelphia wants to estimate the average
+    number of hours adults sleep per night. A survey of \textbf{$n = 250$}
+    randomly selected residents gives a sample mean of \textbf{6.8 hours} with a
+    standard deviation of \textbf{1.4 hours}.
+  \end{keybox}
+  \vspace{0.6em}
+  \begin{center}
+    Construct a \textbf{95\% confidence interval} for the true mean number of
+    sleep hours among all adults in Philadelphia. What interval would you report?
+  \end{center}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  Worked example -- solution
+%---------------------------------------------------------------------
+\begin{frame}{Worked Example: Solution}
+  \textbf{\color{qrnavy}Given}
+  \begin{equation*}
+    \bar{x} = 6.8, \qquad s = 1.4, \qquad n = 250
+  \end{equation*}
+  \vspace{0.2em}
+  \textbf{\color{qrnavy}Compute the 95\% CI}
+  \begin{align*}
+    \bar{x} \;\pm\; z^{*}\cdot\frac{\sigma}{\sqrt{n}}
+      &= 6.8 \;\pm\; 1.96\cdot\frac{1.4}{\sqrt{250}}\\[0.3em]
+      &= 6.8 \;\pm\; 1.96\cdot 0.0886
+       \;=\; 6.8 \;\pm\; 0.174
+  \end{align*}
+  \vspace{0.1em}
+  \begin{center}
+  \begin{tcolorbox}[colback=qrlight,colframe=qrnavy,arc=2pt,boxrule=0.6pt,width=0.6\textwidth,halign=center]
+    $\Rightarrow\; (6.63,\ 6.97)$ hours
+  \end{tcolorbox}
+  \end{center}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  04 Hypothesis Testing
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{04}\ \ Hypothesis Testing}
+  \textbf{\color{qrnavy}The Setup}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Null hypothesis $H_0$}
+        Status quo, ``no effect'' --- what we try to disprove.
+      \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Alternative hypothesis $H_1$}
+        What we hope to prove.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vspace{0.6em}
+  \textbf{\color{qrnavy}Test statistic}
+  \begin{equation*}
+    z \;=\; \frac{\text{estimate} - \text{hypothesized value}}{\text{standard deviation of the estimate}}
+      \;=\; \frac{\text{observed} - \text{null guess}}{\text{SE}}
+  \end{equation*}
+  \begin{center}
+    Large $|z| \;\Rightarrow\;$ evidence against $H_0$.
+  \end{center}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  05 P-Values & Significance
+%---------------------------------------------------------------------
+\begin{frame}{\numbadge{05}\ \ $p$-Values \& Significance}
+  \begin{keybox}[$p$-value]
+    The probability of observing data as extreme as ours \emph{if $H_0$ were true}.
+  \end{keybox}
+  \vspace{0.4em}
+  \begin{columns}[T]
+    \begin{column}{0.54\textwidth}
+      \small
+      \renewcommand{\arraystretch}{1.25}
+      \begin{tabular}{@{}lll@{}}
+        \toprule
+        \textbf{$p$-value range} & \textbf{Interpretation} & \textbf{Symbol}\\
+        \midrule
+        $p \geq 0.10$          & Not significant        &      \\
+        $0.05 \leq p < 0.10$   & Marginally significant & $*$  \\
+        $p < 0.05$             & Significant            & $**$ \\
+        $p < 0.01$             & Highly significant     & $*\!*\!*$\\
+        \bottomrule
+      \end{tabular}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \textbf{\color{qrnavy}Decision rule ($\alpha$)}
+      \begin{itemize}
+        \item If $p < \alpha$: reject $H_0$.
+        \item If $p \geq \alpha$: fail to reject $H_0$.
+      \end{itemize}
+      \vspace{0.4em}
+      \begin{tcolorbox}[colback=qrlight,colframe=qrred,arc=2pt,boxrule=0.6pt]
+        Never ``accept $H_0$'' --- only \textbf{reject} or \textbf{fail to reject}.
+      \end{tcolorbox}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%---------------------------------------------------------------------
+%  Transition to RStudio
+%---------------------------------------------------------------------
+{\setbeamertemplate{footline}{}
+\begin{frame}
+  \vfill
+  \centering
+  {\color{qrnavy}\Huge\bfseries RStudio Practice}\\[0.8em]
+  {\color{qrblue}\large Regression Confidence Intervals with the \texttt{Prestige} data}\\[0.4em]
+  {\color{qrgray} See \texttt{Lab6.Rmd} / \texttt{Lab6\_1015.R}}
+  \vfill
+\end{frame}
+}
+
+\end{document}
