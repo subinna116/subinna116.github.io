@@ -8,37 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-<div class="jobmarket-callout">
-  <span class="jm-badge">On the Job Market</span>
-  <p>I am on the academic job market starting Fall 2026, and I welcome opportunities to connect with search committees and potential collaborators. Please feel free to <a href="mailto:subinna@upenn.edu">reach out</a> or view my <a href="/cv/">CV</a>.</p>
-</div>
-
-<style>
-  .jobmarket-callout {
-    margin: 0 0 2em 0;
-    padding: 1.3em 1.5em;
-    background: #f7f5f0;
-    border-left: 4px solid #011F5B;
-    border-radius: 4px;
-    line-height: 1.6;
-  }
-  .jobmarket-callout p {
-    margin: 0;
-  }
-  .jobmarket-callout .jm-badge {
-    display: inline-block;
-    background: #011F5B;
-    color: #ffffff;
-    font-size: 0.72em;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 3px 10px;
-    border-radius: 3px;
-    margin-bottom: 0.7em;
-  }
-</style>
-
 I am a PhD Candidate in Social Welfare at the University of 
 Pennsylvania's School of Social Policy & Practice. I study how mental health systems can be designed, implemented, and improved to promote recovery and equitable access to care. My work focuses on peer support services, help-seeking and service utilization, mental health equity among Asian and immigrant communities, and the implementation of innovative models of care.
 
@@ -54,3 +23,5 @@ the center of how care gets designed. I have also turned to computational
 methods that let me ask different questions of large-scale data.
 
 Methodologically, I use quantitative, computational, and mixed-methods approaches, including machine learning, natural language processing, structural equation modeling, multilevel modeling, and text-as-data methods. I use these tools to generate evidence that informs mental health policy, service delivery, and implementation.
+
+I am on the academic job market starting Fall 2026 and welcome opportunities to connect, so please feel free to reach out to me at [subinna@upenn.edu](mailto:subinna@upenn.edu).
