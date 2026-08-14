@@ -17,30 +17,124 @@ author_profile: true
   <p>Computational social science holds these areas together. I combine quantitative, computational, and mixed-methods approaches, including machine learning, natural language processing, structural topic modeling, causal inference, and evidence synthesis, to open sources of evidence that mental health services research has barely touched.</p>
 </div>
 
-<h2 class="strand-heading">Three Connected Areas</h2>
+<h2 class="strand-heading">Research Map</h2>
 
-<div class="strand-cards">
-  <div class="strand-card">
-    <div class="strand-card-num">01</div>
-    <h3 class="strand-card-title">Recovery-Oriented Practice &amp; the Peer Workforce</h3>
-    <p class="strand-card-desc">How practitioners translate recovery values into everyday care, and how systems define, integrate, and compensate the peer specialists who carry those values.</p>
-    <p class="strand-finding"><span class="finding-label">Signature finding</span>In a national survey I designed, individual and organizational factors together explained 69.9% of the variance in practitioners' recovery-promoting competency, evidence that recovery-oriented care is structurally produced rather than a matter of individual effort alone.</p>
-  </div>
+<p style="color:#555;font-size:0.95em;margin:0.2em 0 1em;line-height:1.6;">My work forms one connected program across three areas. The papers between two hubs are bridges, where technology meets the peer workforce and where it meets help-seeking. Hover or tap any node to see the paper, and click to open it.</p>
 
-  <div class="strand-card">
-    <div class="strand-card-num">02</div>
-    <h3 class="strand-card-title">Help-Seeking &amp; Sustained Engagement</h3>
-    <p class="strand-card-desc">How language, stigma, and social context shape who reaches mental health services and who stays, from language-concordant care to campus belonging and early dropout from treatment.</p>
-    <p class="strand-finding"><span class="finding-label">Signature finding</span>Using instrumental-variable methods on national facility data, I found that facilities employing Asian language-speaking staff serve about 10% more Asian American clients, yet only 5.2% of facilities employ such staff.</p>
-  </div>
-
-  <div class="strand-card">
-    <div class="strand-card-num">03</div>
-    <h3 class="strand-card-title">Technology &amp; Mental Health Care</h3>
-    <p class="strand-card-desc">How digital and AI tools are changing the way care is sought and delivered, and where the human relationship remains essential.</p>
-    <p class="strand-finding"><span class="finding-label">Signature finding</span>I found that internalized shame drove Korean college students toward AI counseling rather than away from help, suggesting that stigma's force depends on the channel of care.</p>
-  </div>
+<div id="rmap-holder">
+  <svg id="rmap" viewBox="0 0 960 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Network map of my research papers across three areas"></svg>
+  <div id="rtip"></div>
 </div>
+
+<div class="rm-legend">
+  <span><span class="rm-ldot" style="background:#011F5B"></span>Recovery &amp; Peer Workforce</span>
+  <span><span class="rm-ldot" style="background:#0f7b6c"></span>Help-Seeking &amp; Engagement</span>
+  <span><span class="rm-ldot" style="background:#b5651d"></span>Technology &amp; MH Care</span>
+  <span><span style="width:12px;height:12px;display:inline-block;border:2.5px solid #d3a15c;transform:rotate(45deg)"></span>Bridge paper</span>
+</div>
+
+<div class="rm-key">
+  <div class="k" style="border-color:#011F5B"><h4>Recovery-Oriented Practice &amp; the Peer Workforce</h4><p>How practitioners translate recovery values into care, and how systems define, integrate, and compensate the peer specialists who carry them.</p></div>
+  <div class="k" style="border-color:#0f7b6c"><h4>Help-Seeking &amp; Sustained Engagement</h4><p>How language, stigma, and social context shape who reaches mental health services and who stays.</p></div>
+  <div class="k" style="border-color:#b5651d"><h4>Technology &amp; Mental Health Care</h4><p>How digital and AI tools are changing the way care is sought and delivered, and where the human relationship remains essential.</p></div>
+</div>
+
+{% raw %}
+<script>
+(function(){
+  var HUBS={
+    A:{x:235,y:185,color:'#011F5B',label:['Recovery &','Peer Workforce']},
+    B:{x:725,y:185,color:'#0f7b6c',label:['Help-Seeking &','Engagement']},
+    C:{x:480,y:475,color:'#b5651d',label:['Technology &','MH Care']}
+  };
+  var CENT={x:480,y:282};
+  var NODES=[
+    {a:'A',t:'Cultural Humility & Recovery-Promoting Competencies',v:'Adm. Policy Ment. Health, 2026',url:'https://doi.org/10.1007/s10488-026-01513-x'},
+    {a:'A',t:'Individual & Organizational Factors in Recovery Competency',v:'Psychiatric Rehabilitation Journal, 2026',url:'https://doi.org/10.1037/prj0000683'},
+    {a:'A',t:'Recovery-Oriented Practice: Scoping Review',v:'Am. J. Psychiatric Rehabilitation, 2025',url:'https://doi.org/10.69980/ajpr.v28i5.733'},
+    {a:'A',t:'Peer Support Specialists in Mobile Crisis Teams (CFIR)',v:'Psychological Services, 2026',url:'https://doi.org/10.1037/ser0000996'},
+    {a:'A',t:'Integrating Peer Support Workers into NYC Crisis Teams',v:'Community Ment. Health J. (Under Review)',url:''},
+    {a:'A',t:'Centering Lived Experience in Crisis Response Systems',v:'Psychiatric Services (Under Review)',url:''},
+    {a:'A',t:'Developing Lived Experience Expertise: A Framework',v:'Work in progress',url:''},
+    {a:'A',t:'Mapping Personal Recovery Scholarship (Topic Modeling)',v:'Psychiatric Rehab. J. (R&R)',url:''},
+    {a:'A',t:'Mad Studies: The Basics (Korean translation)',v:'Dongnyeok, 2026',url:''},
+    {a:'A',t:'Recovery in the Mental Health Consumer Movement',v:'Book chapter, 2021',url:''},
+    {a:'A',star:true,t:'Dissertation: Peer Specialist Job Postings',v:'In progress',url:''},
+    {a:'B',t:'Asian Language-Speaking Providers & Patient Volume',v:'J. Racial & Ethnic Health Disparities, 2026',url:'https://doi.org/10.1007/s40615-026-02853-y'},
+    {a:'B',t:'Discrimination & Help-Seeking in South Korea',v:'Community Ment. Health J., 2025',url:'https://doi.org/10.1007/s10597-025-01458-9'},
+    {a:'B',t:'Self-Stigma, Belonging & Help-Seeking (East Asian Students)',v:'J. College Student Dev. (Under Review)',url:''},
+    {a:'B',t:'Bullying & School Belonging via Online Vigilance',v:'Youth & Society (R&R)',url:''},
+    {a:'B',t:'Bullying & School Belonging via Perceived Safety',v:'School Mental Health (Under Review)',url:''},
+    {a:'B',t:'Stigma-Reduction Interventions in Asian Populations (Meta-Analysis)',v:'Work in progress',url:''},
+    {a:'B',t:'Mindfulness-Based General Education Course (RCT)',v:'Work in progress',url:''},
+    {a:'B',t:'Social & Cultural Capital of People Living Alone',v:'J. Critical Social Welfare, 2022',url:'https://doi.org/10.47042/ACSW.2022.05.75.171'},
+    {a:'C',t:'Human-ML Collaborative Framework for Social Work Research',v:'J. Soc. Social Work Res. (R&R)',url:''},
+    {a:'AC',t:'Post-COVID Digital Peer Support (Scoping Review)',v:'Psychiatric Services (Under Review)',url:''},
+    {a:'AC',t:'Generative AI in Behavioral Health Peer Support (Review)',v:'Work in progress',url:''},
+    {a:'BC',t:'When Do Students Turn to AI for Counseling?',v:'Computers in Human Behavior Reports (Under Review)',url:''},
+    {a:'BC',t:'Early Treatment Dropout (Gradient Boosting)',v:'J. Behavioral Health Serv. & Res. (Under Review)',url:''},
+    {a:'BC',t:'What Consumers Say About MH Facilities (Google Maps)',v:'Work in progress',url:''}
+  ];
+  var NS='http://www.w3.org/2000/svg';
+  var svg=document.getElementById('rmap'), tip=document.getElementById('rtip'), holder=document.getElementById('rmap-holder');
+  if(!svg) return;
+  function el(n,at){var e=document.createElementNS(NS,n);for(var k in at)e.setAttribute(k,at[k]);return e;}
+  function ang(h){return Math.atan2(h.y-CENT.y,h.x-CENT.x);}
+  var single={A:[],B:[],C:[]};
+  NODES.forEach(function(n){if(n.a.length===1)single[n.a].push(n);});
+  Object.keys(single).forEach(function(k){
+    var h=HUBS[k], base=ang(h), arr=single[k], N=arr.length, span=(N>1)?Math.PI*1.15:0;
+    arr.forEach(function(n,j){var frac=(N>1)?(j/(N-1)-0.5):0, a=base+frac*span, r=(j%2===0)?96:150; n.x=h.x+Math.cos(a)*r; n.y=h.y+Math.sin(a)*r;});
+  });
+  function placeBridges(code,h1,h2){
+    var arr=NODES.filter(function(n){return n.a===code;}), N=arr.length;
+    var mx=(HUBS[h1].x+HUBS[h2].x)/2, my=(HUBS[h1].y+HUBS[h2].y)/2;
+    var dx=HUBS[h2].x-HUBS[h1].x, dy=HUBS[h2].y-HUBS[h1].y, L=Math.hypot(dx,dy), px=-dy/L, py=dx/L;
+    arr.forEach(function(n,j){var off=(j-(N-1)/2)*34; n.x=mx+px*off; n.y=my+py*off;});
+  }
+  placeBridges('AC','A','C'); placeBridges('BC','B','C');
+  NODES.forEach(function(n){
+    if(n.a.length===1){var h=HUBS[n.a]; n.edges=[svg.appendChild(el('line',{class:'rm-edge',x1:h.x,y1:h.y,x2:n.x,y2:n.y}))];}
+    else{var h1=HUBS[n.a[0]],h2=HUBS[n.a[1]]; n.edges=[svg.appendChild(el('line',{class:'rm-edge rm-bridge',x1:h1.x,y1:h1.y,x2:n.x,y2:n.y})),svg.appendChild(el('line',{class:'rm-edge rm-bridge',x1:h2.x,y1:h2.y,x2:n.x,y2:n.y}))];}
+  });
+  var gNodes=[];
+  NODES.forEach(function(n){
+    var color=(n.a.length===1)?HUBS[n.a].color:'#c9862f';
+    var g=el('g',{class:'rm-node',tabindex:'0','aria-label':n.t});
+    var shape;
+    if(n.a.length===2){shape=el('polygon',{points:'0,-8 8,0 0,8 -8,0',transform:'translate('+n.x+' '+n.y+')',stroke:color,fill:'#fff'});}
+    else if(n.star){shape=el('circle',{cx:n.x,cy:n.y,r:9,stroke:color,fill:color});}
+    else{shape=el('circle',{cx:n.x,cy:n.y,r:7,stroke:color,fill:'#fff'});}
+    g.appendChild(shape); gNodes.push(g); svg.appendChild(g);
+    function show(){
+      gNodes.forEach(function(o){if(o!==g)o.classList.add('rm-dim');});
+      g.classList.add('rm-hot'); g.classList.remove('rm-dim');
+      n.edges.forEach(function(e){e.classList.add('rm-hot');});
+      tip.innerHTML='';
+      var st=document.createElement('span'); st.className='rm-t'; st.textContent=n.t;
+      var sv=document.createElement('span'); sv.className='rm-v'; sv.textContent=n.v;
+      tip.appendChild(st); tip.appendChild(sv);
+      if(n.url){var sl=document.createElement('span'); sl.className='rm-lk'; sl.textContent='Click to open →'; tip.appendChild(sl);}
+      var w=svg.clientWidth, hpx=w*620/960, sx=n.x/960*w, sy=n.y/620*hpx, rw=holder.getBoundingClientRect().width;
+      tip.style.left=Math.min(Math.max(sx-40,6),Math.max(rw-260,6))+'px';
+      tip.style.top=(sy+14)+'px'; tip.style.opacity=1; tip.style.transform='translateY(0)';
+    }
+    function hide(){gNodes.forEach(function(o){o.classList.remove('rm-dim','rm-hot');}); n.edges.forEach(function(e){e.classList.remove('rm-hot');}); tip.style.opacity=0;}
+    g.addEventListener('mouseenter',show); g.addEventListener('mouseleave',hide);
+    g.addEventListener('focus',show); g.addEventListener('blur',hide);
+    g.addEventListener('click',function(){if(n.url)window.open(n.url,'_blank','noopener');});
+    g.addEventListener('keydown',function(e){if(e.key==='Enter'&&n.url)window.open(n.url,'_blank','noopener');});
+  });
+  Object.keys(HUBS).forEach(function(k){
+    var h=HUBS[k], g=el('g',{class:'rm-hub'});
+    g.appendChild(el('circle',{cx:h.x,cy:h.y,r:48,fill:h.color}));
+    var t1=el('text',{x:h.x,y:h.y-5,'text-anchor':'middle','font-size':12.5}); t1.textContent=h.label[0];
+    var t2=el('text',{x:h.x,y:h.y+11,'text-anchor':'middle','font-size':12.5}); t2.textContent=h.label[1];
+    g.appendChild(t1); g.appendChild(t2); svg.appendChild(g);
+  });
+})();
+</script>
+{% endraw %}
 
 {% if site.author.googlescholar %}
   <p class="scholar-link">You can also find my articles on <a href="{{site.author.googlescholar}}" target="_blank">my Google Scholar profile</a>.</p>
@@ -179,6 +273,30 @@ author_profile: true
     color: #011F5B;
     margin-bottom: 0.35em;
   }
+
+  /* Research map */
+  #rmap-holder { position: relative; width: 100%; overflow-x: auto; background: #ffffff; border: 1px solid #e6e1d5; border-radius: 8px; margin-top: 0.6em; }
+  #rmap { display: block; min-width: 760px; width: 100%; height: auto; }
+  .rm-edge { stroke: #cfc9bb; stroke-width: 1.2; transition: stroke .15s, stroke-width .15s; }
+  .rm-edge.rm-bridge { stroke: #d3a15c; stroke-dasharray: 4 3; stroke-width: 1.5; }
+  .rm-edge.rm-hot { stroke: #011F5B; stroke-width: 2.4; stroke-dasharray: none; }
+  .rm-node { cursor: pointer; outline: none; }
+  .rm-node circle, .rm-node polygon { stroke-width: 2; fill: #fff; }
+  .rm-node.rm-dim { opacity: .25; }
+  .rm-node.rm-hot circle, .rm-node.rm-hot polygon { stroke-width: 3; }
+  .rm-hub circle { stroke: none; }
+  .rm-hub text { fill: #fff; font-weight: 700; pointer-events: none; }
+  #rtip { position: absolute; pointer-events: none; max-width: 260px; background: #1a1a1a; color: #fff; font-size: 12.5px; line-height: 1.45; padding: 9px 11px; border-radius: 6px; opacity: 0; transform: translateY(4px); transition: opacity .12s; z-index: 5; box-shadow: 0 4px 14px rgba(0,0,0,.25); }
+  #rtip .rm-t { font-weight: 600; display: block; margin-bottom: 3px; }
+  #rtip .rm-v { display: block; opacity: .82; font-size: 11.5px; }
+  #rtip .rm-lk { display: block; color: #7fb0ff; font-size: 11px; margin-top: 5px; }
+  .rm-legend { display: flex; flex-wrap: wrap; gap: 1.1em; margin: 1em 0 0; font-size: .85em; color: #555; }
+  .rm-legend > span { display: inline-flex; align-items: center; gap: .45em; }
+  .rm-ldot { width: 13px; height: 13px; border-radius: 50%; display: inline-block; }
+  .rm-key { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: .9em; margin-top: 1.4em; }
+  .rm-key .k { border-left: 4px solid #ccc; padding: .15em 0 .15em .9em; }
+  .rm-key .k h4 { margin: 0 0 .25em; font-size: 1em; color: #1a1a1a; }
+  .rm-key .k p { margin: 0; font-size: .9em; color: #444; line-height: 1.5; }
 
   .scholar-link {
     font-size: 0.95em;
