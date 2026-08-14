@@ -58,7 +58,7 @@ author_profile: true
     C:{x:600,y:600,color:'#b5651d',label:['Technology &','MH Care']}
   };
   var CENT={x:600,y:367};
-  // a: area (A/B/C) or bridge (AC/BC). s: pub|rev|wip. l: short label. t/v/url: tooltip.
+  /* a: area (A/B/C) or bridge (AC/BC); s: pub|rev|wip; l: short label; t/v/url: tooltip */
   var NODES=[
     {a:'A',s:'pub',l:'Cultural humility',t:'Cultural Humility & Recovery-Promoting Competencies',v:'Adm. Policy Ment. Health, 2026',url:'https://doi.org/10.1007/s10488-026-01513-x'},
     {a:'A',s:'pub',l:'Recovery competency',t:'Individual & Organizational Factors in Recovery Competency',v:'Psychiatric Rehabilitation Journal, 2026',url:'https://doi.org/10.1037/prj0000683'},
@@ -94,7 +94,7 @@ author_profile: true
   function pentagon(cx,cy,r){var p='';for(var i=0;i<5;i++){var a=(-90+i*72)*Math.PI/180;p+=(cx+r*Math.cos(a)).toFixed(1)+','+(cy+r*Math.sin(a)).toFixed(1)+' ';}return p.trim();}
   var vp=el('g',{id:'rmap-vp'}); svg.appendChild(vp);
 
-  // layout: single-area nodes fan outward from their hub on two rings
+  /* layout: single-area nodes fan outward from their hub on two rings */
   var single={A:[],B:[],C:[]};
   NODES.forEach(function(n){if(n.a.length===1)single[n.a].push(n);});
   Object.keys(single).forEach(function(k){
@@ -109,13 +109,13 @@ author_profile: true
   }
   placeBridges('AC','A','C'); placeBridges('BC','B','C');
 
-  // edges
+  /* edges */
   NODES.forEach(function(n){
     if(n.a.length===1){var h=HUBS[n.a]; n.edges=[vp.appendChild(el('line',{class:'rm-edge',x1:h.x,y1:h.y,x2:n.x,y2:n.y}))];}
     else{var h1=HUBS[n.a[0]],h2=HUBS[n.a[1]]; n.edges=[vp.appendChild(el('line',{class:'rm-edge rm-bridge',x1:h1.x,y1:h1.y,x2:n.x,y2:n.y})),vp.appendChild(el('line',{class:'rm-edge rm-bridge',x1:h2.x,y1:h2.y,x2:n.x,y2:n.y}))];}
   });
 
-  // nodes with always-on labels
+  /* nodes with always-on labels */
   var gNodes=[];
   NODES.forEach(function(n){
     var color=(n.a.length===1)?HUBS[n.a].color:'#c9862f';
@@ -151,7 +151,7 @@ author_profile: true
     g.addEventListener('keydown',function(e){if(e.key==='Enter'&&n.url)window.open(n.url,'_blank','noopener');});
   });
 
-  // hubs on top
+  /* hubs on top */
   Object.keys(HUBS).forEach(function(k){
     var h=HUBS[k], g=el('g',{class:'rm-hub'});
     g.appendChild(el('circle',{cx:h.x,cy:h.y,r:66,fill:h.color}));
@@ -160,7 +160,7 @@ author_profile: true
     g.appendChild(t1); g.appendChild(t2); vp.appendChild(g);
   });
 
-  // fit viewBox to content (deterministic, includes estimated label widths)
+  /* fit viewBox to content (deterministic, includes estimated label widths) */
   var minX=1e9,minY=1e9,maxX=-1e9,maxY=-1e9;
   function ext(x,y){if(x<minX)minX=x;if(y<minY)minY=y;if(x>maxX)maxX=x;if(y>maxY)maxY=y;}
   Object.keys(HUBS).forEach(function(k){var h=HUBS[k];ext(h.x-66,h.y-66);ext(h.x+66,h.y+66);});
@@ -169,8 +169,9 @@ author_profile: true
   var VB={x:minX-PAD,y:minY-PAD,w:(maxX-minX)+2*PAD,h:(maxY-minY)+2*PAD};
   svg.setAttribute('viewBox',VB.x+' '+VB.y+' '+VB.w+' '+VB.h);
   svg.setAttribute('preserveAspectRatio','xMidYMid meet');
+  svg.style.aspectRatio=VB.w.toFixed(2)+' / '+VB.h.toFixed(2);
 
-  // zoom + pan
+  /* zoom + pan */
   var view={k:1,tx:0,ty:0};
   function apply(){vp.setAttribute('transform','translate('+view.tx+' '+view.ty+') scale('+view.k+')');}
   function clamp(v,a,b){return v<a?a:(v>b?b:v);}
