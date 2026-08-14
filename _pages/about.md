@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 I am a PhD Candidate in Social Welfare at the University of 
-Pennsylvania's School of Social Policy & Practice. I study how mental health systems can be designed, implemented, and improved to promote recovery and equitable access to care. My work focuses on peer support services, help-seeking and service utilization, mental health equity among Asian and immigrant communities, and the implementation of innovative models of care.
+Pennsylvania's School of Social Policy & Practice. I study how mental health service systems and the workforce that staffs them support recovery and equitable access to care. My work moves across three connected areas, recovery-oriented practice and the peer workforce that delivers it, help-seeking and sustained engagement in mental health services, and the growing role of technology in how care is sought and delivered.
 
 These questions grew out of my training as a mental health social worker 
 in Korea, where I saw how often a diagnosis came to define a person's 
@@ -22,6 +22,6 @@ not an add-on to it, and I put lived experience and peer leadership at
 the center of how care gets designed. I have also turned to computational 
 methods that let me ask different questions of large-scale data.
 
-Methodologically, I use quantitative, computational, and mixed-methods approaches, including machine learning, natural language processing, structural equation modeling, multilevel modeling, and text-as-data methods. I use these tools to generate evidence that informs mental health policy, service delivery, and implementation.
+Computational social science connects these areas. I use quantitative, computational, and mixed-methods approaches, including machine learning, natural language processing, structural topic modeling, structural equation modeling, multilevel modeling, and causal inference, to open sources of evidence that mental health services research has barely touched.
 
 I am on the academic job market starting Fall 2026 and welcome opportunities to connect, so please feel free to reach out to me at [subinna@upenn.edu](mailto:subinna@upenn.edu).
