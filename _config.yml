@@ -84,12 +84,12 @@ author:
 publication_category:
   manuscripts:
     title: 'Peer-Reviewed Journal Articles'
+  books:
+    title: 'Book Chapters and Translations'
   under_review:
     title: 'Manuscripts Under Review'
   work_in_progress:
     title: 'Work in Progress'
-  books:
-    title: 'Book Chapters, Translations & Reports'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
