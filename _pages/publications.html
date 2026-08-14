@@ -19,10 +19,15 @@ author_profile: true
 
 <h2 class="strand-heading">Research Map</h2>
 
-<p style="color:#555;font-size:0.95em;margin:0.2em 0 1em;line-height:1.6;">My work forms one connected program across three areas. The papers between two hubs are bridges, where technology meets the peer workforce and where it meets help-seeking. Hover or tap any node to see the paper, and click to open it.</p>
+<p class="rm-intro">My work forms one connected program across three areas. The papers between two hubs are bridges, where technology meets the peer workforce and where it meets help-seeking. Hover or tap a node for the paper, click to open it, and scroll or use the buttons to zoom.</p>
 
 <div id="rmap-holder">
-  <svg id="rmap" viewBox="0 0 960 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Network map of my research papers across three areas"></svg>
+  <svg id="rmap" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive network map of my research papers across three areas"></svg>
+  <div class="rm-ctrl">
+    <button type="button" data-z="in" aria-label="Zoom in">+</button>
+    <button type="button" data-z="out" aria-label="Zoom out">&minus;</button>
+    <button type="button" data-z="reset" aria-label="Reset view">&#10227;</button>
+  </div>
   <div id="rtip"></div>
 </div>
 
@@ -30,7 +35,12 @@ author_profile: true
   <span><span class="rm-ldot" style="background:#011F5B"></span>Recovery &amp; Peer Workforce</span>
   <span><span class="rm-ldot" style="background:#0f7b6c"></span>Help-Seeking &amp; Engagement</span>
   <span><span class="rm-ldot" style="background:#b5651d"></span>Technology &amp; MH Care</span>
-  <span><span style="width:12px;height:12px;display:inline-block;border:2.5px solid #d3a15c;transform:rotate(45deg)"></span>Bridge paper</span>
+</div>
+<div class="rm-legend rm-legend-2">
+  <span><span class="rm-sw rm-sw-pub"></span>Published</span>
+  <span><span class="rm-sw rm-sw-rev"></span>Under review</span>
+  <span><span class="rm-sw rm-sw-wip"></span>Work in progress</span>
+  <span><span class="rm-sw rm-sw-br"></span>Bridge (two areas)</span>
 </div>
 
 <div class="rm-key">
@@ -43,81 +53,96 @@ author_profile: true
 <script>
 (function(){
   var HUBS={
-    A:{x:235,y:185,color:'#011F5B',label:['Recovery &','Peer Workforce']},
-    B:{x:725,y:185,color:'#0f7b6c',label:['Help-Seeking &','Engagement']},
-    C:{x:480,y:475,color:'#b5651d',label:['Technology &','MH Care']}
+    A:{x:320,y:250,color:'#011F5B',label:['Recovery &','Peer Workforce']},
+    B:{x:880,y:250,color:'#0f7b6c',label:['Help-Seeking &','Engagement']},
+    C:{x:600,y:600,color:'#b5651d',label:['Technology &','MH Care']}
   };
-  var CENT={x:480,y:282};
+  var CENT={x:600,y:367};
+  // a: area (A/B/C) or bridge (AC/BC). s: pub|rev|wip. l: short label. t/v/url: tooltip.
   var NODES=[
-    {a:'A',t:'Cultural Humility & Recovery-Promoting Competencies',v:'Adm. Policy Ment. Health, 2026',url:'https://doi.org/10.1007/s10488-026-01513-x'},
-    {a:'A',t:'Individual & Organizational Factors in Recovery Competency',v:'Psychiatric Rehabilitation Journal, 2026',url:'https://doi.org/10.1037/prj0000683'},
-    {a:'A',t:'Recovery-Oriented Practice: Scoping Review',v:'Am. J. Psychiatric Rehabilitation, 2025',url:'https://doi.org/10.69980/ajpr.v28i5.733'},
-    {a:'A',t:'Peer Support Specialists in Mobile Crisis Teams (CFIR)',v:'Psychological Services, 2026',url:'https://doi.org/10.1037/ser0000996'},
-    {a:'A',t:'Integrating Peer Support Workers into NYC Crisis Teams',v:'Community Ment. Health J. (Under Review)',url:''},
-    {a:'A',t:'Centering Lived Experience in Crisis Response Systems',v:'Psychiatric Services (Under Review)',url:''},
-    {a:'A',t:'Developing Lived Experience Expertise: A Framework',v:'Work in progress',url:''},
-    {a:'A',t:'Mapping Personal Recovery Scholarship (Topic Modeling)',v:'Psychiatric Rehab. J. (R&R)',url:''},
-    {a:'A',t:'Mad Studies: The Basics (Korean translation)',v:'Dongnyeok, 2026',url:''},
-    {a:'A',t:'Recovery in the Mental Health Consumer Movement',v:'Book chapter, 2021',url:''},
-    {a:'A',star:true,t:'Dissertation: Peer Specialist Job Postings',v:'In progress',url:''},
-    {a:'B',t:'Asian Language-Speaking Providers & Patient Volume',v:'J. Racial & Ethnic Health Disparities, 2026',url:'https://doi.org/10.1007/s40615-026-02853-y'},
-    {a:'B',t:'Discrimination & Help-Seeking in South Korea',v:'Community Ment. Health J., 2025',url:'https://doi.org/10.1007/s10597-025-01458-9'},
-    {a:'B',t:'Self-Stigma, Belonging & Help-Seeking (East Asian Students)',v:'J. College Student Dev. (Under Review)',url:''},
-    {a:'B',t:'Bullying & School Belonging via Online Vigilance',v:'Youth & Society (R&R)',url:''},
-    {a:'B',t:'Bullying & School Belonging via Perceived Safety',v:'School Mental Health (Under Review)',url:''},
-    {a:'B',t:'Stigma-Reduction Interventions in Asian Populations (Meta-Analysis)',v:'Work in progress',url:''},
-    {a:'B',t:'Mindfulness-Based General Education Course (RCT)',v:'Work in progress',url:''},
-    {a:'B',t:'Social & Cultural Capital of People Living Alone',v:'J. Critical Social Welfare, 2022',url:'https://doi.org/10.47042/ACSW.2022.05.75.171'},
-    {a:'C',t:'Human-ML Collaborative Framework for Social Work Research',v:'J. Soc. Social Work Res. (R&R)',url:''},
-    {a:'AC',t:'Post-COVID Digital Peer Support (Scoping Review)',v:'Psychiatric Services (Under Review)',url:''},
-    {a:'AC',t:'Generative AI in Behavioral Health Peer Support (Review)',v:'Work in progress',url:''},
-    {a:'BC',t:'When Do Students Turn to AI for Counseling?',v:'Computers in Human Behavior Reports (Under Review)',url:''},
-    {a:'BC',t:'Early Treatment Dropout (Gradient Boosting)',v:'J. Behavioral Health Serv. & Res. (Under Review)',url:''},
-    {a:'BC',t:'What Consumers Say About MH Facilities (Google Maps)',v:'Work in progress',url:''}
+    {a:'A',s:'pub',l:'Cultural humility',t:'Cultural Humility & Recovery-Promoting Competencies',v:'Adm. Policy Ment. Health, 2026',url:'https://doi.org/10.1007/s10488-026-01513-x'},
+    {a:'A',s:'pub',l:'Recovery competency',t:'Individual & Organizational Factors in Recovery Competency',v:'Psychiatric Rehabilitation Journal, 2026',url:'https://doi.org/10.1037/prj0000683'},
+    {a:'A',s:'pub',l:'Recovery practice review',t:'Understanding the Essence of Recovery-Oriented Practice: Scoping Review',v:'Am. J. Psychiatric Rehabilitation, 2025',url:'https://doi.org/10.69980/ajpr.v28i5.733'},
+    {a:'A',s:'pub',l:'Peer specialists in crisis (CFIR)',t:'Peer Support Specialists in Mobile Crisis Teams (CFIR)',v:'Psychological Services, 2026',url:'https://doi.org/10.1037/ser0000996'},
+    {a:'A',s:'rev',l:'Peer support in NYC crisis',t:'Integrating Peer Support Workers into NYC Crisis Teams',v:'Community Ment. Health J. (Under Review)',url:''},
+    {a:'A',s:'rev',l:'Centering lived experience',t:'Centering Lived Experience in Crisis Response Systems',v:'Psychiatric Services (Under Review)',url:''},
+    {a:'A',s:'wip',l:'Lived-experience framework',t:'Developing Lived Experience Expertise: A Framework',v:'Work in progress',url:''},
+    {a:'A',s:'rev',l:'Recovery scholarship (STM)',t:'Mapping Personal Recovery Scholarship (Topic Modeling)',v:'Psychiatric Rehab. J. (R&R)',url:''},
+    {a:'A',s:'pub',l:'Mad Studies (translation)',t:'Mad Studies: The Basics (Korean translation)',v:'Dongnyeok, 2026',url:''},
+    {a:'A',s:'pub',l:'Consumer movement (chapter)',t:'Recovery in the Mental Health Consumer Movement',v:'Book chapter, 2021',url:''},
+    {a:'A',s:'wip',star:true,l:'Dissertation: job postings',t:'Dissertation: Peer Specialist Job Postings',v:'In progress',url:''},
+    {a:'B',s:'pub',l:'Asian-language providers',t:'Asian Language-Speaking Providers & Patient Volume',v:'J. Racial & Ethnic Health Disparities, 2026',url:'https://doi.org/10.1007/s40615-026-02853-y'},
+    {a:'B',s:'pub',l:'Discrimination & help-seeking',t:'Discrimination & Help-Seeking in South Korea',v:'Community Ment. Health J., 2025',url:'https://doi.org/10.1007/s10597-025-01458-9'},
+    {a:'B',s:'rev',l:'Self-stigma & belonging',t:'Self-Stigma, Belonging & Help-Seeking (East Asian Students)',v:'J. College Student Dev. (Under Review)',url:''},
+    {a:'B',s:'rev',l:'Bullying: online vigilance',t:'Bullying & School Belonging via Online Vigilance',v:'Youth & Society (R&R)',url:''},
+    {a:'B',s:'rev',l:'Bullying: perceived safety',t:'Bullying & School Belonging via Perceived Safety',v:'School Mental Health (Under Review)',url:''},
+    {a:'B',s:'wip',l:'Stigma-reduction meta',t:'Stigma-Reduction Interventions in Asian Populations (Meta-Analysis)',v:'Work in progress',url:''},
+    {a:'B',s:'wip',l:'Mindfulness course RCT',t:'Mindfulness-Based General Education Course (RCT)',v:'Work in progress',url:''},
+    {a:'B',s:'pub',l:'Social & cultural capital',t:'Social & Cultural Capital of People Living Alone',v:'J. Critical Social Welfare, 2022',url:'https://doi.org/10.47042/ACSW.2022.05.75.171'},
+    {a:'C',s:'rev',l:'Human-ML framework',t:'Human-ML Collaborative Framework for Social Work Research',v:'J. Soc. Social Work Res. (R&R)',url:''},
+    {a:'AC',s:'rev',l:'Digital peer support review',t:'Post-COVID Digital Peer Support (Scoping Review)',v:'Psychiatric Services (Under Review)',url:''},
+    {a:'AC',s:'wip',l:'GenAI in peer support',t:'Generative AI in Behavioral Health Peer Support (Review)',v:'Work in progress',url:''},
+    {a:'BC',s:'rev',l:'AI counseling & shame',t:'When Do Students Turn to AI for Counseling?',v:'Computers in Human Behavior Reports (Under Review)',url:''},
+    {a:'BC',s:'rev',l:'Treatment dropout (ML)',t:'Early Treatment Dropout (Gradient Boosting)',v:'J. Behavioral Health Serv. & Res. (Under Review)',url:''},
+    {a:'BC',s:'wip',l:'Google Maps reviews',t:'What Consumers Say About MH Facilities (Google Maps)',v:'Work in progress',url:''}
   ];
   var NS='http://www.w3.org/2000/svg';
   var svg=document.getElementById('rmap'), tip=document.getElementById('rtip'), holder=document.getElementById('rmap-holder');
   if(!svg) return;
   function el(n,at){var e=document.createElementNS(NS,n);for(var k in at)e.setAttribute(k,at[k]);return e;}
   function ang(h){return Math.atan2(h.y-CENT.y,h.x-CENT.x);}
+  function pentagon(cx,cy,r){var p='';for(var i=0;i<5;i++){var a=(-90+i*72)*Math.PI/180;p+=(cx+r*Math.cos(a)).toFixed(1)+','+(cy+r*Math.sin(a)).toFixed(1)+' ';}return p.trim();}
+  var vp=el('g',{id:'rmap-vp'}); svg.appendChild(vp);
+
+  // layout: single-area nodes fan outward from their hub on two rings
   var single={A:[],B:[],C:[]};
   NODES.forEach(function(n){if(n.a.length===1)single[n.a].push(n);});
   Object.keys(single).forEach(function(k){
-    var h=HUBS[k], base=ang(h), arr=single[k], N=arr.length, span=(N>1)?Math.PI*1.15:0;
-    arr.forEach(function(n,j){var frac=(N>1)?(j/(N-1)-0.5):0, a=base+frac*span, r=(j%2===0)?96:150; n.x=h.x+Math.cos(a)*r; n.y=h.y+Math.sin(a)*r;});
+    var h=HUBS[k], base=ang(h), arr=single[k], N=arr.length, span=(N>1)?Math.PI*1.30:0;
+    arr.forEach(function(n,j){var frac=(N>1)?(j/(N-1)-0.5):0, a=base+frac*span, r=(j%2===0)?128:208; n.x=h.x+Math.cos(a)*r; n.y=h.y+Math.sin(a)*r;});
   });
   function placeBridges(code,h1,h2){
     var arr=NODES.filter(function(n){return n.a===code;}), N=arr.length;
     var mx=(HUBS[h1].x+HUBS[h2].x)/2, my=(HUBS[h1].y+HUBS[h2].y)/2;
     var dx=HUBS[h2].x-HUBS[h1].x, dy=HUBS[h2].y-HUBS[h1].y, L=Math.hypot(dx,dy), px=-dy/L, py=dx/L;
-    arr.forEach(function(n,j){var off=(j-(N-1)/2)*34; n.x=mx+px*off; n.y=my+py*off;});
+    arr.forEach(function(n,j){var off=(j-(N-1)/2)*52; n.x=mx+px*off; n.y=my+py*off;});
   }
   placeBridges('AC','A','C'); placeBridges('BC','B','C');
+
+  // edges
   NODES.forEach(function(n){
-    if(n.a.length===1){var h=HUBS[n.a]; n.edges=[svg.appendChild(el('line',{class:'rm-edge',x1:h.x,y1:h.y,x2:n.x,y2:n.y}))];}
-    else{var h1=HUBS[n.a[0]],h2=HUBS[n.a[1]]; n.edges=[svg.appendChild(el('line',{class:'rm-edge rm-bridge',x1:h1.x,y1:h1.y,x2:n.x,y2:n.y})),svg.appendChild(el('line',{class:'rm-edge rm-bridge',x1:h2.x,y1:h2.y,x2:n.x,y2:n.y}))];}
+    if(n.a.length===1){var h=HUBS[n.a]; n.edges=[vp.appendChild(el('line',{class:'rm-edge',x1:h.x,y1:h.y,x2:n.x,y2:n.y}))];}
+    else{var h1=HUBS[n.a[0]],h2=HUBS[n.a[1]]; n.edges=[vp.appendChild(el('line',{class:'rm-edge rm-bridge',x1:h1.x,y1:h1.y,x2:n.x,y2:n.y})),vp.appendChild(el('line',{class:'rm-edge rm-bridge',x1:h2.x,y1:h2.y,x2:n.x,y2:n.y}))];}
   });
+
+  // nodes with always-on labels
   var gNodes=[];
   NODES.forEach(function(n){
     var color=(n.a.length===1)?HUBS[n.a].color:'#c9862f';
     var g=el('g',{class:'rm-node',tabindex:'0','aria-label':n.t});
     var shape;
-    if(n.a.length===2){shape=el('polygon',{points:'0,-8 8,0 0,8 -8,0',transform:'translate('+n.x+' '+n.y+')',stroke:color,fill:'#fff'});}
-    else if(n.star){shape=el('circle',{cx:n.x,cy:n.y,r:9,stroke:color,fill:color});}
-    else{shape=el('circle',{cx:n.x,cy:n.y,r:7,stroke:color,fill:'#fff'});}
-    g.appendChild(shape); gNodes.push(g); svg.appendChild(g);
+    if(n.star){shape=el('polygon',{points:pentagon(n.x,n.y,11),class:'rm-shape',fill:color,stroke:color});}
+    else if(n.a.length===2){shape=el('polygon',{points:'0,-9 9,0 0,9 -9,0',transform:'translate('+n.x+' '+n.y+')',class:'rm-shape',stroke:color,fill:(n.s==='pub'?color:'#fff')});}
+    else{shape=el('circle',{cx:n.x,cy:n.y,r:7.5,class:'rm-shape',stroke:color,fill:(n.s==='pub'?color:'#fff')});}
+    if(n.s==='wip' && !n.star) shape.setAttribute('stroke-dasharray','3 2');
+    g.appendChild(shape);
+    var anchor=(n.x<CENT.x)?'end':'start';
+    var lx=(anchor==='end')?(n.x-13):(n.x+13);
+    var tx=el('text',{x:lx,y:n.y+4,'text-anchor':anchor,class:'rm-label'}); tx.textContent=n.l;
+    g.appendChild(tx);
+    vp.appendChild(g); gNodes.push(g);
     function show(){
       gNodes.forEach(function(o){if(o!==g)o.classList.add('rm-dim');});
-      g.classList.add('rm-hot'); g.classList.remove('rm-dim');
+      g.classList.remove('rm-dim'); g.classList.add('rm-hot');
       n.edges.forEach(function(e){e.classList.add('rm-hot');});
       tip.innerHTML='';
-      var st=document.createElement('span'); st.className='rm-t'; st.textContent=n.t;
-      var sv=document.createElement('span'); sv.className='rm-v'; sv.textContent=n.v;
-      tip.appendChild(st); tip.appendChild(sv);
-      if(n.url){var sl=document.createElement('span'); sl.className='rm-lk'; sl.textContent='Click to open →'; tip.appendChild(sl);}
-      var w=svg.clientWidth, hpx=w*620/960, sx=n.x/960*w, sy=n.y/620*hpx, rw=holder.getBoundingClientRect().width;
-      tip.style.left=Math.min(Math.max(sx-40,6),Math.max(rw-260,6))+'px';
-      tip.style.top=(sy+14)+'px'; tip.style.opacity=1; tip.style.transform='translateY(0)';
+      var a=document.createElement('span'); a.className='rm-t'; a.textContent=n.t; tip.appendChild(a);
+      var b=document.createElement('span'); b.className='rm-v'; b.textContent=n.v; tip.appendChild(b);
+      if(n.url){var c=document.createElement('span'); c.className='rm-lk'; c.textContent='Click to open →'; tip.appendChild(c);}
+      var gr=g.getBoundingClientRect(), hr=holder.getBoundingClientRect();
+      var left=Math.min(Math.max(gr.left-hr.left+gr.width/2-40,8),Math.max(hr.width-250,8));
+      tip.style.left=left+'px'; tip.style.top=(gr.top-hr.top+gr.height+8)+'px';
+      tip.style.opacity=1; tip.style.transform='translateY(0)';
     }
     function hide(){gNodes.forEach(function(o){o.classList.remove('rm-dim','rm-hot');}); n.edges.forEach(function(e){e.classList.remove('rm-hot');}); tip.style.opacity=0;}
     g.addEventListener('mouseenter',show); g.addEventListener('mouseleave',hide);
@@ -125,13 +150,49 @@ author_profile: true
     g.addEventListener('click',function(){if(n.url)window.open(n.url,'_blank','noopener');});
     g.addEventListener('keydown',function(e){if(e.key==='Enter'&&n.url)window.open(n.url,'_blank','noopener');});
   });
+
+  // hubs on top
   Object.keys(HUBS).forEach(function(k){
     var h=HUBS[k], g=el('g',{class:'rm-hub'});
-    g.appendChild(el('circle',{cx:h.x,cy:h.y,r:48,fill:h.color}));
-    var t1=el('text',{x:h.x,y:h.y-5,'text-anchor':'middle','font-size':12.5}); t1.textContent=h.label[0];
-    var t2=el('text',{x:h.x,y:h.y+11,'text-anchor':'middle','font-size':12.5}); t2.textContent=h.label[1];
-    g.appendChild(t1); g.appendChild(t2); svg.appendChild(g);
+    g.appendChild(el('circle',{cx:h.x,cy:h.y,r:66,fill:h.color}));
+    var t1=el('text',{x:h.x,y:h.y-6,'text-anchor':'middle','font-size':12}); t1.textContent=h.label[0];
+    var t2=el('text',{x:h.x,y:h.y+13,'text-anchor':'middle','font-size':12}); t2.textContent=h.label[1];
+    g.appendChild(t1); g.appendChild(t2); vp.appendChild(g);
   });
+
+  // fit viewBox to content (deterministic, includes estimated label widths)
+  var minX=1e9,minY=1e9,maxX=-1e9,maxY=-1e9;
+  function ext(x,y){if(x<minX)minX=x;if(y<minY)minY=y;if(x>maxX)maxX=x;if(y>maxY)maxY=y;}
+  Object.keys(HUBS).forEach(function(k){var h=HUBS[k];ext(h.x-66,h.y-66);ext(h.x+66,h.y+66);});
+  NODES.forEach(function(n){ext(n.x-11,n.y-11);ext(n.x+11,n.y+11);var w=n.l.length*7+16;if(n.x<CENT.x)ext(n.x-15-w,n.y);else ext(n.x+15+w,n.y);});
+  var PAD=26;
+  var VB={x:minX-PAD,y:minY-PAD,w:(maxX-minX)+2*PAD,h:(maxY-minY)+2*PAD};
+  svg.setAttribute('viewBox',VB.x+' '+VB.y+' '+VB.w+' '+VB.h);
+  svg.setAttribute('preserveAspectRatio','xMidYMid meet');
+
+  // zoom + pan
+  var view={k:1,tx:0,ty:0};
+  function apply(){vp.setAttribute('transform','translate('+view.tx+' '+view.ty+') scale('+view.k+')');}
+  function clamp(v,a,b){return v<a?a:(v>b?b:v);}
+  function toVB(cx,cy){var r=svg.getBoundingClientRect();return {x:VB.x+(cx-r.left)/r.width*VB.w,y:VB.y+(cy-r.top)/r.height*VB.h};}
+  function zoomAt(P,f){var nk=clamp(view.k*f,0.6,6);view.tx=P.x-nk*(P.x-view.tx)/view.k;view.ty=P.y-nk*(P.y-view.ty)/view.k;view.k=nk;apply();}
+  svg.addEventListener('wheel',function(e){e.preventDefault();zoomAt(toVB(e.clientX,e.clientY),e.deltaY<0?1.15:1/1.15);},{passive:false});
+  var drag=null;
+  svg.addEventListener('mousedown',function(e){if(e.target.closest('.rm-node'))return;e.preventDefault();drag={x:e.clientX,y:e.clientY};svg.classList.add('rm-grab');});
+  window.addEventListener('mousemove',function(e){if(!drag)return;var r=svg.getBoundingClientRect();view.tx+=(e.clientX-drag.x)/r.width*VB.w;view.ty+=(e.clientY-drag.y)/r.height*VB.h;drag={x:e.clientX,y:e.clientY};apply();});
+  window.addEventListener('mouseup',function(){drag=null;svg.classList.remove('rm-grab');});
+  var ctr={x:VB.x+VB.w/2,y:VB.y+VB.h/2};
+  Array.prototype.forEach.call(holder.querySelectorAll('.rm-ctrl button'),function(btn){
+    btn.addEventListener('click',function(){var z=btn.getAttribute('data-z');if(z==='in')zoomAt(ctr,1.3);else if(z==='out')zoomAt(ctr,1/1.3);else{view={k:1,tx:0,ty:0};apply();}});
+  });
+  var tS=null;
+  function tp(t){return {x:t.clientX,y:t.clientY};}
+  function tdist(ts){return Math.hypot(ts[0].clientX-ts[1].clientX,ts[0].clientY-ts[1].clientY);}
+  function tmid(ts){return {x:(ts[0].clientX+ts[1].clientX)/2,y:(ts[0].clientY+ts[1].clientY)/2};}
+  svg.addEventListener('touchstart',function(e){if(e.touches.length===1){if(e.target.closest('.rm-node'))return;tS={mode:'pan',last:tp(e.touches[0])};}else if(e.touches.length===2){tS={mode:'pinch',d:tdist(e.touches)};}},{passive:true});
+  svg.addEventListener('touchmove',function(e){if(!tS)return;if(tS.mode==='pan'&&e.touches.length===1){e.preventDefault();var r=svg.getBoundingClientRect(),p=tp(e.touches[0]);view.tx+=(p.x-tS.last.x)/r.width*VB.w;view.ty+=(p.y-tS.last.y)/r.height*VB.h;tS.last=p;apply();}else if(tS.mode==='pinch'&&e.touches.length===2){e.preventDefault();var nd=tdist(e.touches);zoomAt(toVB(tmid(e.touches).x,tmid(e.touches).y),nd/tS.d);tS.d=nd;}},{passive:false});
+  svg.addEventListener('touchend',function(e){if(e.touches.length===0)tS=null;else if(e.touches.length===1)tS={mode:'pan',last:tp(e.touches[0])};});
+  apply();
 })();
 </script>
 {% endraw %}
@@ -202,98 +263,50 @@ author_profile: true
 
   h2.strand-heading {
     margin-top: 2.5em;
-    margin-bottom: 1em;
+    margin-bottom: 0.6em;
     padding-bottom: 0.4em;
     border-bottom: 2px solid #333;
     font-size: 1.4em;
   }
-
-  .strand-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1em;
-    margin-bottom: 3em;
-  }
-  .strand-card {
-    background: #ffffff;
-    border: 1px solid #e0dcd0;
-    border-radius: 6px;
-    padding: 1.4em 1.3em;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    position: relative;
-    overflow: hidden;
-  }
-  .strand-card::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    background: #011F5B;
-  }
-  .strand-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(1, 31, 91, 0.08);
-    border-color: #011F5B;
-  }
-  .strand-card-num {
-    font-family: Georgia, serif;
-    font-size: 0.85em;
-    color: #011F5B;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    margin-bottom: 0.6em;
-  }
-  .strand-card-title {
-    font-size: 1.08em;
-    color: #1a1a1a;
-    margin: 0 0 0.6em 0;
-    line-height: 1.3;
-    font-weight: 600;
-  }
-  .strand-card-desc {
-    font-size: 0.92em;
-    color: #444;
-    line-height: 1.55;
-    margin: 0;
-  }
-  .strand-finding {
-    margin: 1em 0 0 0;
-    padding-top: 0.9em;
-    border-top: 1px dashed #d8d2c4;
-    font-size: 0.88em;
-    color: #333;
-    line-height: 1.5;
-  }
-  .finding-label {
-    display: block;
-    font-size: 0.72em;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #011F5B;
-    margin-bottom: 0.35em;
+  .rm-intro {
+    color: #555;
+    font-size: 0.95em;
+    margin: 0.2em 0 1em;
+    line-height: 1.6;
   }
 
   /* Research map */
-  #rmap-holder { position: relative; width: 100%; overflow-x: auto; background: #ffffff; border: 1px solid #e6e1d5; border-radius: 8px; margin-top: 0.6em; }
-  #rmap { display: block; min-width: 760px; width: 100%; height: auto; }
+  #rmap-holder { position: relative; width: 100%; background: #ffffff; border: 1px solid #e6e1d5; border-radius: 8px; margin-top: 0.6em; overflow: hidden; user-select: none; }
+  #rmap { display: block; width: 100%; height: auto; cursor: grab; touch-action: none; }
+  #rmap.rm-grab { cursor: grabbing; }
   .rm-edge { stroke: #cfc9bb; stroke-width: 1.2; transition: stroke .15s, stroke-width .15s; }
-  .rm-edge.rm-bridge { stroke: #d3a15c; stroke-dasharray: 4 3; stroke-width: 1.5; }
+  .rm-edge.rm-bridge { stroke: #d3a15c; stroke-dasharray: 4 3; stroke-width: 1.4; }
   .rm-edge.rm-hot { stroke: #011F5B; stroke-width: 2.4; stroke-dasharray: none; }
   .rm-node { cursor: pointer; outline: none; }
-  .rm-node circle, .rm-node polygon { stroke-width: 2; fill: #fff; }
-  .rm-node.rm-dim { opacity: .25; }
-  .rm-node.rm-hot circle, .rm-node.rm-hot polygon { stroke-width: 3; }
+  .rm-node .rm-shape { stroke-width: 2; }
+  .rm-node.rm-dim { opacity: .2; }
+  .rm-node.rm-hot .rm-shape { stroke-width: 3; }
+  .rm-label { font-size: 14px; fill: #2a2722; paint-order: stroke; stroke: #ffffff; stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
+  .rm-node.rm-hot .rm-label { font-weight: 600; }
   .rm-hub circle { stroke: none; }
-  .rm-hub text { fill: #fff; font-weight: 700; pointer-events: none; }
-  #rtip { position: absolute; pointer-events: none; max-width: 260px; background: #1a1a1a; color: #fff; font-size: 12.5px; line-height: 1.45; padding: 9px 11px; border-radius: 6px; opacity: 0; transform: translateY(4px); transition: opacity .12s; z-index: 5; box-shadow: 0 4px 14px rgba(0,0,0,.25); }
+  .rm-hub text { fill: #fff; font-family: Georgia, "Times New Roman", serif; font-weight: 600; letter-spacing: 0.2px; pointer-events: none; }
+  .rm-ctrl { position: absolute; top: 10px; right: 10px; display: flex; flex-direction: column; gap: 6px; z-index: 6; }
+  .rm-ctrl button { width: 30px; height: 30px; border: 1px solid #d9d3c6; background: #fff; color: #011F5B; font-size: 17px; line-height: 1; border-radius: 6px; cursor: pointer; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  .rm-ctrl button:hover { background: #f2efe8; }
+  #rtip { position: absolute; pointer-events: none; max-width: 240px; background: #1a1a1a; color: #fff; font-size: 12.5px; line-height: 1.45; padding: 9px 11px; border-radius: 6px; opacity: 0; transform: translateY(4px); transition: opacity .12s; z-index: 7; box-shadow: 0 4px 14px rgba(0,0,0,.25); }
   #rtip .rm-t { font-weight: 600; display: block; margin-bottom: 3px; }
   #rtip .rm-v { display: block; opacity: .82; font-size: 11.5px; }
   #rtip .rm-lk { display: block; color: #7fb0ff; font-size: 11px; margin-top: 5px; }
   .rm-legend { display: flex; flex-wrap: wrap; gap: 1.1em; margin: 1em 0 0; font-size: .85em; color: #555; }
+  .rm-legend.rm-legend-2 { margin-top: .5em; }
   .rm-legend > span { display: inline-flex; align-items: center; gap: .45em; }
   .rm-ldot { width: 13px; height: 13px; border-radius: 50%; display: inline-block; }
-  .rm-key { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: .9em; margin-top: 1.4em; }
+  .rm-sw { width: 13px; height: 13px; display: inline-block; }
+  .rm-sw-pub { background: #555; border-radius: 50%; }
+  .rm-sw-rev { border: 2px solid #555; border-radius: 50%; }
+  .rm-sw-wip { border: 2px dashed #555; border-radius: 50%; }
+  .rm-sw-br { border: 2px solid #c9862f; transform: rotate(45deg); }
+  .rm-key { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: .9em; margin-top: 1.4em; margin-bottom: 1em; }
   .rm-key .k { border-left: 4px solid #ccc; padding: .15em 0 .15em .9em; }
   .rm-key .k h4 { margin: 0 0 .25em; font-size: 1em; color: #1a1a1a; }
   .rm-key .k p { margin: 0; font-size: .9em; color: #444; line-height: 1.5; }
@@ -339,7 +352,8 @@ author_profile: true
   }
 
   @media (max-width: 600px) {
-    .strand-cards { grid-template-columns: 1fr; }
+    .rm-key { grid-template-columns: 1fr; }
     .rq-quote { font-size: 1.05em; }
+    .rm-label { font-size: 15px; }
   }
 </style>
