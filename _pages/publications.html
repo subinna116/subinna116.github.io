@@ -17,15 +17,29 @@ author_profile: true
   <p>Computational social science holds these areas together. I combine quantitative, computational, and mixed-methods approaches, including machine learning, natural language processing, structural topic modeling, causal inference, and evidence synthesis, to open sources of evidence that mental health services research has barely touched.</p>
 </div>
 
+<h2 class="strand-heading">Three Connected Areas</h2>
+
+<div class="area-cards">
+  <div class="area-card" style="--ac:#011F5B">
+    <span class="area-card-tag">Area 01</span>
+    <h3>Recovery-Oriented Practice &amp; the Peer Workforce</h3>
+    <p>How practitioners translate recovery values into care, and how systems define, integrate, and compensate the peer specialists who carry them.</p>
+  </div>
+  <div class="area-card" style="--ac:#0f7b6c">
+    <span class="area-card-tag">Area 02</span>
+    <h3>Help-Seeking &amp; Sustained Engagement</h3>
+    <p>How language, stigma, and social context shape who reaches mental health services and who stays.</p>
+  </div>
+  <div class="area-card" style="--ac:#b5651d">
+    <span class="area-card-tag">Area 03</span>
+    <h3>Technology &amp; Mental Health Care</h3>
+    <p>How digital and AI tools are changing the way care is sought and delivered, and where the human relationship remains essential.</p>
+  </div>
+</div>
+
 <h2 class="strand-heading">Research Map</h2>
 
 <p class="rm-intro">My work forms one connected program across three areas. The papers between two hubs are bridges, where technology meets the peer workforce and where it meets help-seeking. Hover or tap a node for the paper, click to open it, and scroll or use the buttons to zoom.</p>
-
-<div class="rm-key">
-  <div class="k" style="border-color:#011F5B"><h4>Recovery-Oriented Practice &amp; the Peer Workforce</h4><p>How practitioners translate recovery values into care, and how systems define, integrate, and compensate the peer specialists who carry them.</p></div>
-  <div class="k" style="border-color:#0f7b6c"><h4>Help-Seeking &amp; Sustained Engagement</h4><p>How language, stigma, and social context shape who reaches mental health services and who stays.</p></div>
-  <div class="k" style="border-color:#b5651d"><h4>Technology &amp; Mental Health Care</h4><p>How digital and AI tools are changing the way care is sought and delivered, and where the human relationship remains essential.</p></div>
-</div>
 
 <div id="rmap-holder">
   <svg id="rmap" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive network map of my research papers across three areas"></svg>
@@ -276,6 +290,56 @@ author_profile: true
     line-height: 1.6;
   }
 
+  .area-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1em;
+    margin: 1.1em 0 2.4em;
+  }
+  .area-card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e6e1d5;
+    border-radius: 8px;
+    padding: 1.4em 1.3em 1.25em;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .area-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--ac);
+  }
+  .area-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+    border-color: var(--ac);
+  }
+  .area-card-tag {
+    display: inline-block;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.72em;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ac);
+    font-weight: 600;
+    margin-bottom: 0.5em;
+  }
+  .area-card h3 {
+    margin: 0 0 0.5em;
+    font-size: 1.05em;
+    line-height: 1.3;
+    color: #1a1a1a;
+  }
+  .area-card p {
+    margin: 0;
+    font-size: 0.92em;
+    line-height: 1.55;
+    color: #444;
+  }
+
   /* Research map */
   #rmap-holder { position: relative; width: 100%; background: #ffffff; border: 1px solid #e6e1d5; border-radius: 8px; margin-top: 0.6em; overflow: hidden; user-select: none; }
   #rmap { display: block; width: 100%; height: auto; cursor: grab; touch-action: none; }
@@ -353,6 +417,7 @@ author_profile: true
   }
 
   @media (max-width: 600px) {
+    .area-cards { grid-template-columns: 1fr; }
     .rm-key { grid-template-columns: 1fr; }
     .rq-quote { font-size: 1.05em; }
     .rm-label { font-size: 15px; }
