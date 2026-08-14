@@ -12,12 +12,12 @@ author_profile: true
     My full CV is available as a PDF.
   </p>
 
-  <a href="{{ base_path }}/files/cv_6.pdf" class="cv-button" target="_blank">
+  <a href="{{ base_path }}/files/cv_7.pdf" class="cv-button" target="_blank">
     📄 Download CV (PDF)
   </a>
 
   <p style="margin-top: 2em; color: #666; font-size: 0.9em;">
-    Last updated: June 2026
+    Last updated: August 2026
   </p>
 </div>
 

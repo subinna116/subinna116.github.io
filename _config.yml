@@ -86,6 +86,8 @@ publication_category:
     title: 'Peer-Reviewed Journal Articles'
   under_review:
     title: 'Manuscripts Under Review'
+  work_in_progress:
+    title: 'Work in Progress'
   books:
     title: 'Book Chapters, Translations & Reports'
 
