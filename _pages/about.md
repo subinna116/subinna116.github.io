@@ -22,6 +22,6 @@ not an add-on to it, and I put lived experience and peer leadership at
 the center of how care gets designed. I have also turned to computational 
 methods that let me ask different questions of large-scale data.
 
-Computational social science connects these areas. I use quantitative, computational, and mixed-methods approaches, including machine learning, natural language processing, structural topic modeling, structural equation modeling, multilevel modeling, and causal inference, to open sources of evidence that mental health services research has barely touched.
+Methodologically, I use quantitative, computational, and mixed-methods approaches, including machine learning, natural language processing, structural equation modeling, multilevel modeling, and text-as-data methods. I use these tools to generate evidence that informs mental health policy, service delivery, and implementation.
 
 I am on the academic job market starting Fall 2026 and welcome opportunities to connect, so please feel free to reach out to me at [subinna@upenn.edu](mailto:subinna@upenn.edu).
