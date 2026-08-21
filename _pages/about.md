@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-<p class="hero-tagline">I bring computational and mixed methods to mental health services research on recovery, the peer support workforce, and equitable access to care.</p>
+<p class="hero-tagline">I am a mental health services researcher who studies how service systems, the workforce inside them, and new technologies can better support recovery and equitable access to care for people with serious mental illness and racial, ethnic, and linguistic minority populations.</p>
 
 <div class="hero-keywords">
   <span>Mental Health Services</span>
