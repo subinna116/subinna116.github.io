@@ -24,4 +24,6 @@ methods that let me ask different questions of large-scale data.
 
 Methodologically, I use quantitative, computational, and mixed-methods approaches, including machine learning, natural language processing, structural equation modeling, multilevel modeling, and text-as-data methods. I use these tools to generate evidence that informs mental health policy, service delivery, and implementation.
 
+My dissertation examines how the peer specialist role is defined and valued in the labor market. In *Rhetoric of Peer Support and Reality of Labor*, I analyze peer specialist job postings to study how employers construct the role, the institutional contexts that shape it, and how the work is compensated.
+
 I am on the academic job market starting Fall 2026 and welcome opportunities to connect, so please feel free to reach out to me at [subinna@upenn.edu](mailto:subinna@upenn.edu).
