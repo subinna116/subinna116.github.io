@@ -28,6 +28,8 @@ Methodologically, I use quantitative, computational, and mixed-methods approache
 
 My dissertation examines how the peer specialist role is defined and valued in the labor market. In *Rhetoric of Peer Support and Reality of Labor*, I analyze peer specialist job postings to study how employers construct the role, the institutional contexts that shape it, and how the work is compensated.
 
+<p class="jobmarket-line">I am on the academic job market starting Fall 2026 and welcome opportunities to connect, so please feel free to reach out to me at <a href="mailto:subinna@upenn.edu">subinna@upenn.edu</a>.</p>
+
 <h2 class="about-h2">Recent News</h2>
 
 <ul class="news">
@@ -43,8 +45,6 @@ My dissertation examines how the peer specialist role is defined and valued in t
   <li><span class="news-date d-feb">Feb 2026</span> I published a first-authored article, <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=yIahrOwAAAAJ&amp;sortby=pubdate&amp;citation_for_view=yIahrOwAAAAJ:zYLM7Y9cAGgC" target="_blank" rel="noopener"><i>Impact of Asian Language-Speaking Mental Health Providers on Asian American Patient Volume in Mental Health Treatment Facilities</i></a>, in the <i>Journal of Racial and Ethnic Health Disparities</i>.</li>
   <li><span class="news-date d-jan">Jan 2026</span> I presented <a href="https://sswr.confex.com/sswr/2026/webprogram/start.html#srch=words%7CSubin%20Na%7Cmethod%7Cand%7Cpge%7C1" target="_blank" rel="noopener">three papers</a> at the Society for Social Work and Research (SSWR) in Washington, D.C.</li>
 </ul>
-
-<p class="jobmarket-line">I am on the academic job market starting Fall 2026 and welcome opportunities to connect, so please feel free to reach out to me at <a href="mailto:subinna@upenn.edu">subinna@upenn.edu</a>.</p>
 
 <div class="areas-footer">
   <span class="areas-label">Research areas</span>
