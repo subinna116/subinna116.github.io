@@ -8,14 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-<p class="hero-tagline">I am a mental health services researcher who studies how service systems, the workforce inside them, and new technologies can better support recovery and equitable access to care for people with serious mental illness and racial, ethnic, and linguistic minority populations.</p>
-
-<div class="hero-keywords">
-  <span>Mental Health Services</span>
-  <span>Peer Support Workforce</span>
-  <span>Help-Seeking &amp; Equity</span>
-  <span>Computational Social Science</span>
-</div>
+<p class="hero-tagline">I am a mental health services researcher and computational social scientist studying how mental health systems shape access to care, experiences within services, and sustained engagement and recovery.</p>
 
 <div class="metrics">
   <div class="metric"><span class="num">7</span><span class="lbl">Peer-reviewed articles</span></div>
@@ -45,10 +38,14 @@ My dissertation examines how the peer specialist role is defined and valued in t
 <h2 class="about-h2">Recent News</h2>
 
 <ul class="news">
-  <li><span class="news-date">Oct 2026</span> Presented at the Council on Social Work Education (CSWE) Annual Conference in Atlanta, recognized with an Honorable Mention for the Disability Manuscript Award.</li>
-  <li><span class="news-date">2026</span> Named a Leonard Davis Institute of Health Economics (LDI) Fellow at the University of Pennsylvania.</li>
-  <li><span class="news-date">2026</span> Received the Best Project Award at the Summer Institutes in Computational Social Science at Penn (SICSS-Penn).</li>
-  <li><span class="news-date">2026</span> New article on individual and organizational factors in recovery-promoting competency published in <i>Psychiatric Rehabilitation Journal</i>.</li>
+  <li><span class="news-date">Oct 2026</span> Will present at the Council on Social Work Education (CSWE) Annual Conference in Atlanta.</li>
+  <li><span class="news-date">Jul 2026</span> Defended my dissertation proposal.</li>
+  <li><span class="news-date">Jul 2026</span> Received an Honorable Mention for the Disability Manuscript Award from the Council on Social Work Education (CSWE). <a href="https://www.cswe.org/cswe-announces-2026-commissions-and-councils-award-recipients" target="_blank" rel="noopener">Announcement</a></li>
+  <li><span class="news-date">Jun 2026</span> Received the Best Project Award at the Summer Institutes in Computational Social Science at Penn (SICSS-Penn). <a href="https://sicss-phmh.netlify.app/" target="_blank" rel="noopener">Details</a></li>
+  <li><span class="news-date">Jun 2026</span> New first-authored article, <i>Cultural Humility and Recovery-Promoting Competencies Among Mental Health Practitioners</i>, published in <i>Administration and Policy in Mental Health and Mental Health Services Research</i>. <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=yIahrOwAAAAJ&amp;sortby=pubdate&amp;citation_for_view=yIahrOwAAAAJ:W7OEmFMy1HYC" target="_blank" rel="noopener">Read</a></li>
+  <li><span class="news-date">Mar 2026</span> Named a Leonard Davis Institute of Health Economics (LDI) Fellow at the University of Pennsylvania.</li>
+  <li><span class="news-date">Feb 2026</span> New first-authored article on individual and organizational factors in recovery-promoting competency, published in <i>Psychiatric Rehabilitation Journal</i>. <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=yIahrOwAAAAJ&amp;sortby=pubdate&amp;citation_for_view=yIahrOwAAAAJ:IjCSPb-OGe4C" target="_blank" rel="noopener">Read</a></li>
+  <li><span class="news-date">Feb 2026</span> New first-authored article, <i>Impact of Asian Language-Speaking Mental Health Providers on Asian American Patient Volume in Mental Health Treatment Facilities</i>, in the <i>Journal of Racial and Ethnic Health Disparities</i>. <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=yIahrOwAAAAJ&amp;sortby=pubdate&amp;citation_for_view=yIahrOwAAAAJ:zYLM7Y9cAGgC" target="_blank" rel="noopener">Read</a></li>
   <li><span class="news-date">Jan 2026</span> Presented three papers at the Society for Social Work and Research (SSWR) in Washington, D.C.</li>
 </ul>
 
@@ -65,22 +62,31 @@ My dissertation examines how the peer specialist role is defined and valued in t
 
 <p class="jobmarket-line">I am on the academic job market starting Fall 2026 and welcome opportunities to connect, so please feel free to reach out to me at <a href="mailto:subinna@upenn.edu">subinna@upenn.edu</a>.</p>
 
+<div class="areas-footer">
+  <span class="areas-label">Research areas</span>
+  <div class="hero-keywords">
+    <span>Mental Health Services</span>
+    <span>Peer Support Workforce</span>
+    <span>Help-Seeking &amp; Equity</span>
+    <span>Computational Social Science</span>
+  </div>
+</div>
+
 <style>
   .hero-tagline {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.16em;
+    font-size: 1.2em;
     line-height: 1.5;
     color: #1a1a1a;
-    margin: 0 0 0.9em;
+    margin: 0 0 1.3em;
   }
   .hero-keywords {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5em;
-    margin: 0 0 1.5em;
+    margin: 0;
   }
   .hero-keywords span {
-    font-size: 0.8em;
+    font-size: 0.82em;
     letter-spacing: 0.02em;
     color: #011F5B;
     background: #eef1f6;
@@ -141,6 +147,15 @@ My dissertation examines how the peer specialist role is defined and valued in t
     font-size: 0.85em;
     margin-right: 0.5em;
   }
+  .news a {
+    color: #011F5B;
+    font-weight: 600;
+    font-size: 0.88em;
+    white-space: nowrap;
+  }
+  .news a::before {
+    content: "\2192 ";
+  }
   .awards li {
     padding: 0.55em 0;
     border-bottom: 1px solid #eee;
@@ -168,6 +183,19 @@ My dissertation examines how the peer specialist role is defined and valued in t
     border-left: 4px solid #011F5B;
     border-radius: 4px;
     line-height: 1.6;
+  }
+  .areas-footer {
+    margin-top: 2.4em;
+    padding-top: 1.4em;
+    border-top: 1px solid #eee;
+  }
+  .areas-label {
+    display: block;
+    font-size: 0.8em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 0.6em;
   }
   @media (max-width: 600px) {
     .metrics { grid-template-columns: repeat(2, 1fr); }
