@@ -10,8 +10,8 @@ redirect_from:
 
 <p class="hero-tagline">I am a mental health services researcher and computational social scientist studying how mental health systems shape access to care, experiences within services, and sustained engagement and recovery.</p>
 
-I am a PhD Candidate in Social Welfare at the University of 
-Pennsylvania's School of Social Policy & Practice. I study how mental health service systems and the workforce that staffs them support recovery and equitable access to care. My work moves across three connected areas, recovery-oriented practice and the peer workforce that delivers it, help-seeking and sustained engagement in mental health services, and the growing role of technology in how care is sought and delivered.
+As a PhD Candidate in Social Welfare at the University of 
+Pennsylvania's School of Social Policy & Practice, I work across three connected areas, recovery-oriented practice and the peer workforce that delivers it, help-seeking and sustained engagement in mental health services, and the growing role of technology in how care is sought and delivered.
 
 These questions grew out of my training as a mental health social worker 
 in Korea, where I saw how often a diagnosis came to define a person's 
