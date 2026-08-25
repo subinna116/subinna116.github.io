@@ -12,7 +12,7 @@ author_profile: true
     My full CV is available as a PDF.
   </p>
 
-  <a href="{{ base_path }}/files/cv_9.pdf" class="cv-button" target="_blank">
+  <a href="{{ base_path }}/files/Subin_Na_CV_August.pdf" class="cv-button" download="Subin_Na_CV_August.pdf">
     📄 Download CV (PDF)
   </a>
 
