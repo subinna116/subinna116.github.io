@@ -34,6 +34,7 @@ My dissertation examines how the peer specialist role is defined and valued in t
 
 <ul class="news">
   <li><span class="news-date d-oct">Oct 2026</span> I will present at the Council on Social Work Education (CSWE) Annual Conference in Atlanta.</li>
+  <li><span class="news-date d-sep">Sep 2026</span> My first-authored paper, <i>Where We Have Been and Where We Are Going: Mapping the Evolution of Personal Recovery Scholarship in Serious Mental Illness Through Structural Topic Modeling</i>, was accepted to <i>Psychiatric Rehabilitation Journal</i>.</li>
   <li><span class="news-date d-aug">Aug 2026</span> My co-authored paper, <i>A Human-ML Collaborative Framework for Justice-Centered Statistical Machine Learning in Social Work Research</i>, was accepted to the <i>Journal of the Society for Social Work and Research</i>.</li>
   <li><span class="news-date d-aug">Aug 2026</span> I received a Conference Travel Award ($600) from the School of Social Policy &amp; Practice.</li>
   <li><span class="news-date d-jul">Jul 2026</span> I defended my dissertation proposal.</li>
@@ -114,6 +115,7 @@ My dissertation examines how the peer specialist role is defined and valued in t
   .d-jun { background: #fbf1d8; color: #8a6a1c; }
   .d-jul { background: #efe6fb; color: #664b9c; }
   .d-aug { background: #ddf1ee; color: #2f7468; }
+  .d-sep { background: #e6eafb; color: #3f4b96; }
   .d-oct { background: #fce8db; color: #a15c2c; }
   .news a {
     color: #011F5B;
