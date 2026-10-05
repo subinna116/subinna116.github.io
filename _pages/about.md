@@ -33,6 +33,7 @@ My dissertation examines how the peer specialist role is defined and valued in t
 <h2 class="about-h2">Recent News</h2>
 
 <ul class="news">
+  <li><span class="news-date d-oct">Oct 2026</span> I received the Outstanding Dissertation Proposal Award from the Korean American Social Work Educators Association (KASWEA).</li>
   <li><span class="news-date d-oct">Oct 2026</span> I will present at the Council on Social Work Education (CSWE) Annual Conference in Atlanta.</li>
   <li><span class="news-date d-sep">Sep 2026</span> My first-authored paper, <i>Where We Have Been and Where We Are Going: Mapping the Evolution of Personal Recovery Scholarship in Serious Mental Illness Through Structural Topic Modeling</i>, was accepted to <i>Psychiatric Rehabilitation Journal</i>.</li>
   <li><span class="news-date d-aug">Aug 2026</span> My co-authored paper, <i>A Human-ML Collaborative Framework for Justice-Centered Statistical Machine Learning in Social Work Research</i>, was accepted to the <i>Journal of the Society for Social Work and Research</i>.</li>
