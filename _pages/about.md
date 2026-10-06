@@ -15,7 +15,7 @@ Pennsylvania's School of Social Policy & Practice, I work across three connected
 
 These questions grew out of my training as a mental health social worker 
 in Korea, where I saw how often a diagnosis came to define a person's 
-whole life and how rarely those living with mental illness were asked 
+whole life and how rarely people living with mental illness were asked 
 what recovery should mean to them. Too often the system had little to 
 offer them, in part because it was built without the people it was meant 
 to serve. My doctoral work carries these concerns in new directions. I 
@@ -24,7 +24,7 @@ not an add-on to it, and I put lived experience and peer leadership at
 the center of how care gets designed. I have also turned to computational 
 methods that let me ask different questions of large-scale data.
 
-Methodologically, I use quantitative, computational, and mixed-methods approaches, including machine learning, natural language processing, structural equation modeling, multilevel modeling, and text-as-data methods. I use these tools to generate evidence that informs mental health policy, service delivery, and implementation.
+Methodologically, I use quantitative, computational, and mixed-methods approaches, including machine learning, natural language processing, structural equation modeling, and multilevel modeling. I use these tools to generate evidence that informs mental health policy, service delivery, and implementation.
 
 My dissertation examines how the peer specialist role is defined and valued in the labor market. In *Rhetoric of Peer Support and Reality of Labor*, I analyze peer specialist job postings to study how employers construct the role, the institutional contexts that shape it, and how the work is compensated.
 
