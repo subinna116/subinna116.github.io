@@ -9,20 +9,20 @@ author_profile: true
 
 <div class="cv-content">
   <div class="cv-toolbar">
-    <a href="{{ base_path }}/files/Subin_CV_1016.pdf" class="cv-button" download="Subin_CV_1016.pdf">
+    <a href="{{ base_path }}/files/Subin_CV_1019.pdf" class="cv-button" download="Subin_CV_1019.pdf">
       📄 Download CV (PDF)
     </a>
-    <a href="{{ base_path }}/files/Subin_CV_1016.pdf" class="cv-button cv-button-ghost" target="_blank" rel="noopener">
+    <a href="{{ base_path }}/files/Subin_CV_1019.pdf" class="cv-button cv-button-ghost" target="_blank" rel="noopener">
       Open in new tab
     </a>
     <span class="cv-updated">Last updated: October 2026</span>
   </div>
 
   <div class="cv-preview">
-    <object data="{{ base_path }}/files/Subin_CV_1016.pdf#view=FitH" type="application/pdf" aria-label="Preview of Subin Na's CV">
+    <object data="{{ base_path }}/files/Subin_CV_1019.pdf#view=FitH" type="application/pdf" aria-label="Preview of Subin Na's CV">
       <div class="cv-preview-fallback">
         <p>The inline preview could not load in this browser.</p>
-        <a href="{{ base_path }}/files/Subin_CV_1016.pdf" class="cv-button" target="_blank" rel="noopener">Open the CV (PDF)</a>
+        <a href="{{ base_path }}/files/Subin_CV_1019.pdf" class="cv-button" target="_blank" rel="noopener">Open the CV (PDF)</a>
       </div>
     </object>
   </div>
