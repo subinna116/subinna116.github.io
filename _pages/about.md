@@ -32,7 +32,7 @@ My dissertation examines how the peer specialist role is defined and valued in t
 
 <ul class="news">
   <li><span class="news-date d-nov">Nov 2026</span> My first-authored paper, <i>Factors Associated with Early Psychotherapy Dropout Among Postsecondary Students with Serious Mental Illness: A Machine Learning Approach</i>, was accepted to the <i>Journal of Behavioral Health Services &amp; Research</i>.</li>
-  <li><span class="news-date d-oct">Oct 2026</span> My first-authored paper, <i>Who Turns to AI for Psychological Support? Internalized Shame and Perceived Social Support Among Korean College Students</i>, was accepted to <i>Computers in Human Behavior Reports</i>.</li>
+  <li><span class="news-date d-oct">Oct 2026</span> My first-authored paper, <a href="https://doi.org/10.1016/j.chbr.2026.101396" target="_blank" rel="noopener"><i>Who Turns to AI for Psychological Support? Internalized Shame and Perceived Social Support Among Korean College Students</i></a>, was accepted to <i>Computers in Human Behavior Reports</i>.</li>
   <li><span class="news-date d-oct">Oct 2026</span> I received a Research Student Travel Grant Award ($650) from the Graduate and Professional Student Assembly (GAPSA) at the University of Pennsylvania.</li>
   <li><span class="news-date d-oct">Oct 2026</span> I received the Outstanding Dissertation Proposal Award from the Korean American Social Work Educators Association (KASWEA).</li>
   <li><span class="news-date d-sep">Sep 2026</span> My first-authored paper, <i>Where We Have Been and Where We Are Going: Mapping the Evolution of Personal Recovery Scholarship in Serious Mental Illness Through Structural Topic Modeling</i>, was accepted to <i>Psychiatric Rehabilitation Journal</i>.</li>
