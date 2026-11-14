@@ -28,8 +28,6 @@ Methodologically, I use quantitative, computational, and mixed-methods approache
 
 My dissertation examines how the peer specialist role is defined and valued in the labor market. In *Rhetoric of Peer Support and Reality of Labor*, I analyze peer specialist job postings to study how employers construct the role, the institutional contexts that shape it, and how the work is compensated.
 
-<p class="jobmarket-line">I am on the academic job market starting Fall 2026 and welcome opportunities to connect, so please feel free to reach out to me at <a href="mailto:subinna@upenn.edu">subinna@upenn.edu</a>.</p>
-
 <h2 class="about-h2">Recent News</h2>
 
 <ul class="news">
@@ -125,14 +123,6 @@ My dissertation examines how the peer specialist role is defined and valued in t
     color: #011F5B;
     text-decoration: underline;
     text-underline-offset: 2px;
-  }
-  .jobmarket-line {
-    margin-top: 1.8em;
-    padding: 1em 1.2em;
-    background: #f7f5f0;
-    border-left: 4px solid #011F5B;
-    border-radius: 4px;
-    line-height: 1.6;
   }
   .areas-footer {
     margin-top: 2.4em;
