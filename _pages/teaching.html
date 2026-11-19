@@ -7,6 +7,16 @@ author_profile: true
 
 {% include base_path %}
 
+<div class="teaching-philosophy">
+  <p class="tp-quote">The goal of the recovery process is not to become normal. The goal is to embrace our human vocation of becoming more deeply, more fully human.</p>
+  <p class="tp-cite">— Patricia Deegan, <i>Recovery as a Journey of the Heart</i> (1996)</p>
+  <p class="tp-comment">I bring this orientation to my classroom. I meet students as full human beings, and I trust that what they bring, their experiences, their questions, their hesitations, belongs in our work together.</p>
+</div>
+
+<div class="teaching-intro">
+  <p>I have served as a teaching assistant and lab instructor for graduate-level courses in machine learning and quantitative methods at the University of Pennsylvania, and for undergraduate courses in social work practice at Seoul National University. My teaching emphasizes connecting quantitative reasoning and applied methods to social work and mental health research, and supporting students as they develop both analytical skills and applied judgment.</p>
+</div>
+
 {% assign penn_count = 0 %}
 {% for post in site.teaching reversed %}
   {% if post.category == "penn" %}{% assign penn_count = penn_count | plus: 1 %}{% endif %}
@@ -85,6 +95,53 @@ author_profile: true
 {% endif %}
 
 <style>
+  .teaching-philosophy {
+    margin: 0.5em 0 2.2em 0;
+    padding: 1.6em 1.8em;
+    background: #f7f5f0;
+    border-left: 4px solid #011F5B;
+    border-radius: 4px;
+  }
+  .tp-quote {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.18em;
+    font-style: italic;
+    line-height: 1.5;
+    color: #1a1a1a;
+    margin: 0 0 0.6em 0;
+    padding-left: 0.8em;
+    position: relative;
+  }
+  .tp-quote::before {
+    content: "\201C";
+    position: absolute;
+    left: -0.15em;
+    top: -0.3em;
+    font-size: 2.6em;
+    color: #011F5B;
+    opacity: 0.25;
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+  .tp-cite {
+    font-size: 0.88em;
+    color: #555;
+    margin: 0 0 1.2em 0.8em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #e0dcd0;
+    letter-spacing: 0.02em;
+  }
+  .tp-comment {
+    font-size: 1em;
+    color: #2a2a2a;
+    margin: 0 0 0 0.8em;
+    line-height: 1.6;
+  }
+
+  .teaching-intro {
+    margin-bottom: 2.5em;
+    line-height: 1.7;
+  }
   h2.teaching-category {
     margin-top: 2em;
     margin-bottom: 1em;
@@ -223,5 +280,6 @@ author_profile: true
   @media (max-width: 600px) {
     .eval-box { margin-left: 0; padding: 1em; }
     .eval-scores { grid-template-columns: repeat(2, 1fr); }
+    .tp-quote { font-size: 1.05em; }
   }
 </style>

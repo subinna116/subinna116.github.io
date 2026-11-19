@@ -28,11 +28,6 @@ Methodologically, I use quantitative, computational, and mixed-methods approache
 
 My dissertation examines how the peer specialist role is defined and valued in the labor market. In *Rhetoric of Peer Support and Reality of Labor*, I analyze peer specialist job postings to study how employers construct the role, the institutional contexts that shape it, and how the work is compensated.
 
-<blockquote class="about-quote">
-  <p class="aq-text">The goal of the recovery process is not to become normal. The goal is to embrace our human vocation of becoming more deeply, more fully human.</p>
-  <p class="aq-cite">— Patricia Deegan, <i>Recovery as a Journey of the Heart</i> (1996)</p>
-</blockquote>
-
 <div class="areas-footer">
   <span class="areas-label">Research areas</span>
   <div class="hero-keywords">
@@ -44,25 +39,6 @@ My dissertation examines how the peer specialist role is defined and valued in t
 </div>
 
 <style>
-  .about-quote {
-    margin: 0 0 1.8em;
-    padding: 0.1em 0 0.1em 1.2em;
-    border-left: 4px solid #011F5B;
-  }
-  .aq-text {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.08em;
-    font-style: italic;
-    line-height: 1.55;
-    color: #2a2a2a;
-    margin: 0 0 0.5em;
-  }
-  .aq-cite {
-    font-size: 0.86em;
-    color: #666;
-    margin: 0;
-    letter-spacing: 0.02em;
-  }
   .hero-tagline {
     font-size: 1.22em;
     line-height: 1.5;
