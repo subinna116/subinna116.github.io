@@ -78,11 +78,6 @@ redirect_from:
   <circle cx="930" cy="156" r="8.5" fill="none" stroke="#f0c796" stroke-opacity="0.5" stroke-width="1"/>
 </svg>
 
-<blockquote class="about-quote">
-  <p class="aq-text">The goal of the recovery process is not to become normal. The goal is to embrace our human vocation of becoming more deeply, more fully human.</p>
-  <p class="aq-cite">— Patricia Deegan, <i>Recovery as a Journey of the Heart</i> (1996)</p>
-</blockquote>
-
 <p class="hero-tagline">I am a mental health services researcher and computational social scientist studying how mental health systems shape access to care, experiences within services, and sustained engagement and recovery.</p>
 
 As a PhD Candidate in Social Welfare at the University of 
@@ -102,6 +97,11 @@ methods that let me ask different questions of large-scale data.
 Methodologically, I use quantitative, computational, and mixed-methods approaches, including machine learning, natural language processing, structural equation modeling, and multilevel modeling. I use these tools to generate evidence that informs mental health policy, service delivery, and implementation.
 
 My dissertation examines how the peer specialist role is defined and valued in the labor market. In *Rhetoric of Peer Support and Reality of Labor*, I analyze peer specialist job postings to study how employers construct the role, the institutional contexts that shape it, and how the work is compensated.
+
+<blockquote class="about-quote">
+  <p class="aq-text">The goal of the recovery process is not to become normal. The goal is to embrace our human vocation of becoming more deeply, more fully human.</p>
+  <p class="aq-cite">— Patricia Deegan, <i>Recovery as a Journey of the Heart</i> (1996)</p>
+</blockquote>
 
 <div class="areas-footer">
   <span class="areas-label">Research areas</span>
