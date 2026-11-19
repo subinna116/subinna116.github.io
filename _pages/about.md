@@ -78,6 +78,11 @@ redirect_from:
   <circle cx="930" cy="156" r="8.5" fill="none" stroke="#f0c796" stroke-opacity="0.5" stroke-width="1"/>
 </svg>
 
+<blockquote class="about-quote">
+  <p class="aq-text">The goal of the recovery process is not to become normal. The goal is to embrace our human vocation of becoming more deeply, more fully human.</p>
+  <p class="aq-cite">— Patricia Deegan, <i>Recovery as a Journey of the Heart</i> (1996)</p>
+</blockquote>
+
 <p class="hero-tagline">I am a mental health services researcher and computational social scientist studying how mental health systems shape access to care, experiences within services, and sustained engagement and recovery.</p>
 
 As a PhD Candidate in Social Welfare at the University of 
@@ -115,6 +120,25 @@ My dissertation examines how the peer specialist role is defined and valued in t
     display: block;
     margin: 0 0 1.6em;
     border-radius: 6px;
+  }
+  .about-quote {
+    margin: 0 0 1.8em;
+    padding: 0.1em 0 0.1em 1.2em;
+    border-left: 4px solid #011F5B;
+  }
+  .aq-text {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.08em;
+    font-style: italic;
+    line-height: 1.55;
+    color: #2a2a2a;
+    margin: 0 0 0.5em;
+  }
+  .aq-cite {
+    font-size: 0.86em;
+    color: #666;
+    margin: 0;
+    letter-spacing: 0.02em;
   }
   .hero-tagline {
     font-size: 1.22em;
